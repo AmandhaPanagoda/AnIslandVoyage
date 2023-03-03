@@ -1,9 +1,12 @@
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 const totalElem = document.querySelector(".total");
 const cartItemsElem = document.querySelector(".cart-items");
+const checkoutButton = document.querySelector(".checkout");
+const clearCartButton = document.querySelector(".clear-cart");
 
 let cartItems = [];
 
+// add to cart button functionality
 for (let i = 0; i < addToCartButtons.length; i++) {
   addToCartButtons[i].addEventListener("click", function () {
     const product = this.parentElement;
@@ -38,5 +41,25 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     }
     totalElem.innerText = `Total: $${totalPrice.toFixed(2)}`;
     cartItemsElem.innerHTML = cartItemsHTML;
+
+    //check out button 
+    if (totalPrice === 0) {
+      document.querySelector(".checkout").setAttribute("disabled", true);
+    } else {
+      document.querySelector(".checkout").removeAttribute("disabled");
+    }
   });
 }
+
+
+//clear button functionality
+clearCartButton.addEventListener("click", function () {
+  const quantityInputs = document.querySelectorAll(".quantity");
+  for (let i = 0; i < quantityInputs.length; i++) {
+    quantityInputs[i].value = 0;
+  }
+  cartItems = []; //clear cart
+  totalElem.innerText = "Total: $0.00";
+  cartItemsElem.innerHTML = "";
+  checkoutButton.disabled = true;
+});
