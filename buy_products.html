@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Products</title>
+    <link rel="stylesheet" type="text/css" href="buy_products.css">
+</head>
+<body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">    
+        <img src="buy_products_resources/slides/slide1.gif" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="buy_products_resources/slides/slide2.gif" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="buy_products_resources/slides/slide3.gif" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div class="row">
+    <div class="column left">
+        <div class="product-container">
+            <div class="product">
+              <img src="buy_products_resources/premium-tea.png" alt="Product 1">
+              <h3>Ceylon Tea</h3>
+              <p>Finely balanced richness, flavour, strength & aroma for the perfect tea.</p>
+              <h4 class="price">$10</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/coffee-set.png" alt="Product 2">
+              <h3>Soul Iced Coffee</h3>
+              <p>Crafted with rich & smooth 100% arabica coffee, grown in Sri Lanka.</p>
+              <h4 class="price">$23.5</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/cinnamon-set.png" alt="Product 3">
+              <h3>Cinnamon Gift Box</h3>
+              <p>Includes cinnamon quills, powder, coconut sugar and more.</p>
+              <h4 class="price">$30.5</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <img src="buy_products_resources/spice-set.png" alt="Product 4">
+              <h3>Premium Spice Pack</h3>
+              <p>Includes 5 types of Sri Lanka's premium quality spices.</p>
+              <h4 class="price">$40</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/storage-box.png" alt="Product 5">
+              <h3>Palmyra Storage Box</h3>
+              <p>Crafted from locally sourced Palmyra, a stylish storage solution for your interior.</p>
+              <h4 class="price">$9.99</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/side-bag.png" alt="Product 6">
+              <h3>Side Bag</h3>
+              <p>A cute fashionable side bag which is made using banana fibre.</p>
+              <h4 class="price">$39.99</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <img src="buy_products_resources/wood-box.png" alt="Product 8">
+              <h3>Gift Boxes</h3>
+              <p>Laser cut gift boxes made using up-cycled pallet wood</p>
+              <h4 class="price">$29.99</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/aromatic-set.png" alt="Product 9">
+              <h3>Beach Aroma Collection</h3>
+              <p>Includes 6 tropical fragrances capturing the aromatic notes of Ceylon.</p>
+              <h4 class="price">$50</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product">
+              <img src="buy_products_resources/spa-set.png" alt="Product 10">
+              <h3>Peace Lemongrass Set</h3>
+              <p>Infused with precious Ceylonese herbs & pure aromatic essential oils.</p>
+              <h4 class="price">$39.99</h4>
+              <label for="quantity" class="quantity-label">QUANTITY:</label>
+              <input class="quantity" type="number" value="0" min="0" max="10">
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+    </div>
+    <div class="column right">
+        <!--Order summary-->
+        <div class="order-summary">
+            <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-items"></div>
+            <p class="total">Total: $0.00</p>
+            <form id="checkout-form" action="checkout_details.html">
+                <label for="user-name">Name*</label><br>
+                <input type="text" id="user-name" name="user-name" placeholder="John Doe" required><br>
+            
+                <label for="contact">Contact Number*</label><br>
+                <input type="tel" id="contact" pattern="07[1,2,5,6,7,8][0-9]{7}" maxlength="10" name="contact" placeholder="07XXXXXXXX" required><br>
+            
+                <label for="email">Email*</label><br>
+                <input type="email" id="email" name="email" placeholder="dummy@email.com" required><br>
+    
+                <p>
+                <input type="checkbox" id="normal" name="delivery" value="express" required>Express Delivery
+                <br>
+                </p>
+            
+                <br>
+                <button type="submit" class="checkout">Checkout</button>
+                <button type="button" class="clear-cart">Clear Cart</button>
+            </form>
+            </div>      
+        </div>
+    </div>
+    </div>
+    <script src="buy_products.js"></script>
+    <script>
+      initializeForm2();
+    </script>
+</body>
+</html>

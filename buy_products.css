@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+  }
+  
+.left {
+    width: 75%;
+  }
+  
+.right {
+    width: 25%;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+
+/* Product container styles*/
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 10px; /* add margin-top to move the product container below the slides container */
+  }
+  
+.product {
+    display: flex;
+    width: 280px;
+    margin: 25px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #b1b1b194;
+    padding: 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  
+.product:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+.product img {
+    width: 100%;
+    display: block;
+  }
+  
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+.product p {
+    color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 2px;
+    margin: 0px;
+  }
+  
+.product h4.price {
+    font-size: 25px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+.product .quantity-label {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+  }
+  
+.product .quantity {
+    color: navy;
+    border-color: navy;
+    border: 1px;
+    font-size: 13px;
+    padding: 5px;
+  }
+  
+.product input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+  
+.product input[type="number"] {
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+  }
+  
+.product button.add-to-cart {
+    background-color: #4CAF50;
+    letter-spacing: 1px;
+    font-weight: 700;
+    align-content: flex-end;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    margin-top: 10px;
+    cursor: pointer; 
+    text-align: center;
+    width: 100%;
+    }
+  
+.product button.add-to-cart:hover {
+      opacity: 0.7;
+    }
+
+/* Summary styles*/
+.order-summary {
+    height: 100%;
+
+    background-color: #f2f2f2;
+    padding: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
+  
+.order-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+.cart-items {
+    margin-bottom: 10px;
+    color: #525151;
+  }
+  
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.checkout {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+.checkout:hover {
+  background-color: #3c913e;
+  font-weight: 600;
+  font-size: 1rem;
+}
+  
+.checkout.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+.clear-cart {
+    background-color: #f63838;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+.clear-cart:hover {
+  background-color: #d23131;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  width: fit-content;
+  position: relative;
+  margin: auto;
+  height: 215px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
