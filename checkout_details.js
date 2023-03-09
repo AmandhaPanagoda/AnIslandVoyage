@@ -88,7 +88,7 @@ function initializeForm() {
 
     // Validate name
     if (!name || /^\d+$/.test(name)) {
-      nameInput.nextElementSibling.textContent = 'Please enter a valid name';
+      nameInput.nextElementSibling.textContent = 'Please enter your name';
       isValid = false;
     } else {
       nameInput.nextElementSibling.textContent = '';
@@ -106,7 +106,7 @@ function initializeForm() {
   
     // Validate contact
     if (contact.length !== 10) {
-      contactInput.nextElementSibling.textContent = 'Please enter a valid 10 digit phone number';
+      contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
       isValid = false;
     } else {
       contactInput.nextElementSibling.textContent = '';
@@ -115,7 +115,7 @@ function initializeForm() {
   
     // Validate address
     if (!address) {
-      addressInput.nextElementSibling.textContent = 'Please enter an address';
+      addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
       isValid = false;
     } else {
       addressInput.nextElementSibling.textContent = '';
@@ -142,7 +142,7 @@ function initializeForm() {
 
     // Validate card number
     if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
-      cardNumberInput.nextElementSibling.textContent = 'Please enter a valid 16 digit card number';
+      cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
       isValid = false;
     } else {
       cardNumberInput.nextElementSibling.textContent = '';
@@ -178,7 +178,7 @@ function initializeForm() {
   nameInput.addEventListener('blur', () => {
     const name = nameInput.value;
     if (!name || /^\d+$/.test(name)) {
-      nameInput.nextElementSibling.textContent = 'Please enter a valid name';
+      nameInput.nextElementSibling.textContent = 'Please enter your name';
     } else {
       nameInput.nextElementSibling.textContent = '';
     }
@@ -196,7 +196,7 @@ function initializeForm() {
   contactInput.addEventListener('blur', () => {
     const contact = contactInput.value;
     if (contact.length !== 10) {
-      contactInput.nextElementSibling.textContent = 'Please enter a valid 10 digit phone number';
+      contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
     } else {
       contactInput.nextElementSibling.textContent = '';
     }
@@ -205,7 +205,7 @@ function initializeForm() {
   addressInput.addEventListener('blur', () => {
     const address = addressInput.value;
     if (!address) {
-      addressInput.nextElementSibling.textContent = 'Please enter an address';
+      addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
     } else {
       addressInput.nextElementSibling.textContent = '';
     }
@@ -223,7 +223,7 @@ function initializeForm() {
   cardNameInput.addEventListener('blur', () => {
     const cardName = cardNameInput.value;
     if (!cardName || /^\d+$/.test(cardName)) {
-      cardNameInput.nextElementSibling.textContent = 'Please enter a valid name';
+      cardNameInput.nextElementSibling.textContent = 'Please enter the cardholder\'s name';
     } else {
       cardNameInput.nextElementSibling.textContent = '';
     }
@@ -241,9 +241,27 @@ function initializeForm() {
   cvvInput.addEventListener('blur', () => {
     const cvv = cvvInput.value;
     if (!cvv || !/^\d{3}$/.test(cvv)) {
-      cvvInput.nextElementSibling.textContent = 'Please enter a valid cvv';
+      cvvInput.nextElementSibling.textContent = 'Please enter a valid security number';
     } else {
       cvvInput.nextElementSibling.textContent = '';
     }
   });
   
+//back to top button functionality
+let backToTopButton = document.getElementById("back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

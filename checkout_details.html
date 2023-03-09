@@ -8,8 +8,11 @@
     <link rel="stylesheet" type="text/css" href="checkout_details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="icon" href="/buy_products_resources/icon.png" type="image/x-icon">
 </head>
 <body>
+  <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></button>
+  <div class = "content-container">
   <h3>Order Summary</h3>
   <pre><span class="ref">Reference Number : </span><span>#</span><span id="referenceNum"></span></pre>  
   <pre><span class="ref">Date & Time               : </span><span id="date-time"></span></pre>
@@ -161,9 +164,15 @@
         </div>
       </div>
     </div>
-    <button type="submit" name="placeorderbutton" id="placeorderbutton" value="Place Order">Place Order</button>
-    <button type="reset" name="resetbutton" id="resetbutton" value="Clear All">Clear All</button>
+    <div class="submit-reset">
+      <button type="reset" name="resetbutton" id="resetbutton" value="Clear All">Clear All</button>
+      <button type="submit" name="placeorderbutton" id="placeorderbutton" value="Place Order">Place Order</button>
+    </div>
   </form>
+  </div>
+  <footer>
+    <p>Done By: <a href="Amandha.html">Amandha Panagoda</a></p>
+  </footer>
 
    
     <script src="checkout_details.js"></script>
