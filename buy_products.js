@@ -82,9 +82,18 @@ function updateCart() {
   if (totalPrice === 0) {
     checkoutButton.classList.add("disabled");
     checkoutButton.disabled = true;
+    alert("Your cart is empty! Please choose some items.");
   } else {
     checkoutButton.classList.remove("disabled");
     checkoutButton.disabled = false;
+    const nameArray = cartItems.map(item => item.name);
+    localStorage.setItem("itemNameArray", JSON.stringify(nameArray));
+
+    const quantityArray = cartItems.map(item => item.quantity);
+    localStorage.setItem("quantityArray", JSON.stringify(quantityArray));
+
+    const priceArray = cartItems.map(item => item.price);
+    localStorage.setItem("priceArray", JSON.stringify(priceArray));
   }
 }
 
@@ -98,25 +107,10 @@ function clearCart() {
   for (let i = 0; i < quantityInputs.length; i++) {
     quantityInputs[i].value = 0;
   }
-  
+  document.getElementById("checkout-form").reset();
   // Clear the cart array and update the cart
   cartItems = [];
   updateCart();
-}
-
-// Add event listener to checkout button
-checkoutButton.addEventListener("click", checkout);
-
-// Function to handle checkout
-function checkout() {
-  // Get the total price
-  const totalPrice = parseFloat(totalElem.innerText.slice(7));
-
-  // Verify that the total price is greater than 0 and a delivery method is selected
-  if (totalPrice > 0 && deliveryMethod) {
-    // Navigate to the checkout details page with the selected delivery method
-    window.location.href = `checkout_details.html?delivery=${deliveryMethod}`;
-  }
 }
 
 //slides control
@@ -147,40 +141,5 @@ function showSlides(n) {
 }
 
 
-// Function to get the value of a URL parameter by name
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, '\\$&');
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-      results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
 
-// Function to set the value of an input element by ID
-function setInputValueById(id, value) {
-  document.getElementById(id).value = value;
-}
 
-// Function to initialize form1
-function initializeForm1() {
-  const form1 = document.querySelector('#checkout-form');
-  form1.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const userName = document.querySelector('#user-name').value;
-    const email = document.querySelector('#email').value;
-    const contact = document.querySelector('#contact').value;
-    window.location.href = `checkout-details.html?userName=${userName}&email=${email}&contact=${contact}`;
-  });
-}
-
-// Function to initialize form2
-function initializeForm2() {
-  const userName = getParameterByName('user-name');
-  const email = getParameterByName('email');
-  const contact = getParameterByName('contact');
-  setInputValueById('user-name', userName);
-  setInputValueById('email', email);
-  setInputValueById('contact', contact);
-}
