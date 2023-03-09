@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    position: -webkit-sticky;
+    /*Safari*/
+    position: sticky;
+    top:600px;
+    padding-right: 200px;
+}
+
+li {
+    display: inline;
+    float: right;
+}
+
+a {
+    display: block;
+    padding: 15px;
+    background-color: #d1d1d878;
+    color: black;
+    text-decoration: double;
+    font: weight 200;
+    font-size: large;
+}
+
+li a:hover {
+    background-color:#63636541;
+}
+
+.active {
+    background-color: #63636541;
+}
