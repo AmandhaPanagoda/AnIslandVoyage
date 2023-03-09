@@ -3,7 +3,7 @@ ul {
     position: -webkit-sticky;
     /*Safari*/
     position: sticky;
-    top: 0%;
+    top:600px;
     padding-right: 200px;
 }
 
@@ -18,15 +18,14 @@ a {
     background-color: #d1d1d878;
     color: black;
     text-decoration: double;
-    font: weight 500;
+    font: weight 200;
     font-size: large;
-
 }
 
 li a:hover {
-    background-color: #b6b6bb;
+    background-color:#63636541;
 }
 
 .active {
-    background-color: #b6b6bb;
+    background-color: #63636541;
 }
