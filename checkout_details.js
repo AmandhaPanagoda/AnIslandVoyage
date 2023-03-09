@@ -18,9 +18,10 @@ itemNameArray.forEach((element, index) => {
   const qtyCell = document.createElement("td"); 
   qtyCell.textContent = qty[index]; 
   tableRow.appendChild(qtyCell); 
+
   const priceCell = document.createElement("td"); 
   const total = qty[index] * price[index];
-  priceCell.textContent = total; 
+  priceCell.textContent = "$"+total; 
   tableRow.appendChild(priceCell); 
   
   document.getElementById("cartItemTableBody").appendChild(tableRow); 
@@ -32,6 +33,8 @@ const totalPriceAllItems = c.reduce((acc, val) => acc + val, 0);
 
 console.log(totalPriceAllItems);
 document.getElementById("totalPriceAllItems").textContent = totalPriceAllItems.toFixed(2);
+document.getElementById("referenceNum").innerHTML = Math.floor(Math.random() * 90000847512) + 10000847512;
+document.getElementById("date-time").innerHTML=new Date();
 
 // Function to get the value of a URL parameter by name
 function getParameterByName(name, url) {
@@ -64,6 +67,7 @@ function initializeForm() {
   const emailInput = document.getElementById('email');
   const contactInput = document.getElementById('contact');
   const addressInput = document.getElementById('address');
+  const postcodeInput = document.getElementById('postcode');
   const cardNameInput = document.getElementById('cname');
   const cardNumberInput = document.getElementById('ccnum');
   const cvvInput = document.getElementById('cvv');
@@ -74,16 +78,21 @@ function initializeForm() {
     const email = emailInput.value;
     const contact = contactInput.value;
     const address = addressInput.value;
+    const postcode = postcodeInput.value;
     const cardName = cardNameInput.value;
     const cardNumber = cardNumberInput.value;
     const cvv = cvvInput.value;
   
+
+    event.preventDefault();
+
     // Validate name
     if (!name || /^\d+$/.test(name)) {
       nameInput.nextElementSibling.textContent = 'Please enter a valid name';
       isValid = false;
     } else {
       nameInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
   
     // Validate email
@@ -92,6 +101,7 @@ function initializeForm() {
       isValid = false;
     } else {
       emailInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
   
     // Validate contact
@@ -100,6 +110,7 @@ function initializeForm() {
       isValid = false;
     } else {
       contactInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
   
     // Validate address
@@ -108,14 +119,25 @@ function initializeForm() {
       isValid = false;
     } else {
       addressInput.nextElementSibling.textContent = '';
+      isValid = true;
+    }
+
+    // Validate Postcode
+    if (!postcode || !/^\d{5}$/.test(postcode)) {
+      postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
+      isValid = false;
+    } else {
+      postcodeInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
 
     // Validate card name
     if (!cardName || /^\d+$/.test(cardName)) {
-      cardNameInput.nextElementSibling.textContent = 'Please enter a valid card name';
+      cardNameInput.nextElementSibling.textContent = 'Please enter the card holder name';
       isValid = false;
     } else {
       cardNameInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
 
     // Validate card number
@@ -124,18 +146,31 @@ function initializeForm() {
       isValid = false;
     } else {
       cardNumberInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
 
     // Validate CVV
     if (!cvv || !/^\d{3}$/.test(cvv)) {
-      cvvInput.nextElementSibling.textContent = 'Please enter a valid 3 digit CVV number';
+      cvvInput.nextElementSibling.textContent = 'Please enter the 3 digit security number';
       isValid = false;
     } else {
       cvvInput.nextElementSibling.textContent = '';
+      isValid = true;
     }
 
     if (!isValid) {
+      console.log(10);
       event.preventDefault();
+    } else {
+      console.log("valid inputs");
+      alert("Your order is submitted successfully! Await your delivery!");
+      const confirmed = confirm('Do you want to proceed to products catalogue?');
+
+      if (confirmed) {
+        window.location.href = 'buy_products.html';
+      } else {
+        window.location.href = 'index.html';
+      }
     }
 });
     
@@ -176,6 +211,15 @@ function initializeForm() {
     }
   });
 
+  postcodeInput.addEventListener('blur', () => {
+    const postcode = postcodeInput.value;
+    if (!postcode || !/^\d{5}$/.test(postcode)) {
+      postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
+    } else {
+      postcodeInput.nextElementSibling.textContent = '';
+    }
+  });
+
   cardNameInput.addEventListener('blur', () => {
     const cardName = cardNameInput.value;
     if (!cardName || /^\d+$/.test(cardName)) {
@@ -186,7 +230,7 @@ function initializeForm() {
   });
 
   cardNumberInput.addEventListener('blur', () => {
-    const cardNumber = cardNameInput.value;
+    const cardNumber = cardNumberInput.value;
     if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
       cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
     } else {
