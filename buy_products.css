@@ -5,7 +5,11 @@
     box-sizing: border-box;
   }
 
-footer {
+body {
+    margin: 0;
+  }
+
+.footer {
   display: flex;
   bottom:0; 
   width:100%; 
@@ -197,6 +201,8 @@ footer {
   position: relative;
   margin: auto;
   height: 215px;
+  margin: 40px;
+  margin-bottom: 2px;
 }
 
 /* Hide the images by default */
