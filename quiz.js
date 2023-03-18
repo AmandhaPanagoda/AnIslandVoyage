@@ -11,7 +11,7 @@
         const numberOfCorrectAnswersRef = document.getElementById("numberOfCorrectAnswers")
         const timerRef = document.getElementById("timer")
 
-        // Queation References
+        // Question References
         const promptRef = document.getElementById("prompt")
         const optionsRef = document.querySelectorAll("#options > div > label")
         const inputsRef = document.querySelectorAll("#options > div > input")
@@ -129,13 +129,9 @@
             // Check if the given answer matches with the correct answer
             if (selectedAnswer === questions[currentQuestion].correctAnswer) {
                 // Update the score
-                currentScore += 2;
+                currentScore = currentScore + 10;
                 numberOfCorrectAnswers += 1;
-            } else {
-                // Update the score
-                currentScore -= 1;
-            }
-
+            } 
             // Move on the the next question
             currentQuestion += 1;
 
@@ -187,7 +183,7 @@
 
             // Update UI elements
             numberOfCorrectAnswersRef.innerText = numberOfCorrectAnswers
-            scoreRef.innerText = currentScore
+            scoreRef.innerText = currentScore + "%"
             timeTakenRef.innerText = 60 - secondsLeft
 
             // Iterate through all the answers
@@ -212,7 +208,7 @@
 
             // spending on the final score add css class to review screen
             // which will set the background color of the UI
-            if (currentScore >= 10) {
+            if (currentScore >= 50) {
                 reviewViewRef.classList.add("pass")
                 document.body.style.background = "rgb(34 197 94)";
             } else {
