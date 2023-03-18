@@ -115,7 +115,6 @@
                     return parseInt(radioArray[i].value);
                 }
             }
-            return undefined;
         }
 
 

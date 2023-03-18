@@ -14,6 +14,42 @@ h1 {
   font-size: 60px;
 }
 
+#back-to-top {
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: rgb(255, 255, 255); 
+  color: rgb(0, 0, 0); 
+  cursor: pointer; 
+  border-radius: 50%;
+  width: 40px;
+}
+
+#back-to-top:hover {
+  background-color: #0a0a0a; 
+  color: white;
+}
+
+.footer {
+  display: flex;
+  bottom:0; 
+  width:100%; 
+  height: 70px;
+  background-color: #2C74B3;
+  font-weight: 500;
+  color: #070707;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+    color: rgb(0, 22, 24);
+    font-style: italic;
+}
+
 section {
   padding: 0px 50px;
 }
