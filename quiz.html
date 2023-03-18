@@ -7,12 +7,32 @@
   <title>Quiz</title>
 
   <!-- Home css and java scripts linking -->
-  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="quiz.css">
   <!-- Navigation Bar css and js linking -->
   <!-- Footer css and js linking -->
+    
+    <!--Navigation bar CSS-->
+    <link rel="stylesheet" href="navigation.css">
+
+    <!--Favicon-->
+    <link rel="icon" href="/logos/icon.png?" type="image/x-icon">
+
 </head>
 
   <body>
+     <!--Navigation Bar-->
+     <nav class="navigation-bar">
+        <img src="/logos/white-logo-transparent.png" alt="Logo" class="logo">
+          <ul id = "pages">
+              <li><a href="home.html" data-title="Home">Home</a></li>
+              <li><a href="buy_products.html" data-title="Shop">Shop</a></li>
+              <li><a href="#" data-title="Comments">Comments</a></li>
+              <li><a href="quiz.html" data-title="Quiz">Quiz</a></li>
+              <li><a href="content.html" data-title="Places to Visit">Places to Visit</a></li>
+              <li><a href="#" data-title="Student Details">Student Details</a></li>
+          </ul>
+      </nav>
+      
           <!-- searching icon stuff -->
   
     <div class="quiz-container">
@@ -68,7 +88,7 @@
         </div>
 
     </div>
-    <script src="javaScripts/quiz.js"></script>
+    <script src="quiz.js"></script>
 </body>
 
 </html>
