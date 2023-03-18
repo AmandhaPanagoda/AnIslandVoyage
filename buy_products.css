@@ -204,13 +204,13 @@ span.error {
   border-radius: 2rem;
   padding: 10px;
   font-weight: 600;
-  background-color: #adffe1;
+  background-color: #04a96d;
   border: 3px solid #04a96d;
-  color: #04a96d;
+  color: #ffffff;
   }
 
 .checkout:hover {
-  background-color: #3c913e;
+  background-color: #04a96d;
   font-weight: 600;
   font-size: 1rem;
   color: white;
@@ -226,14 +226,14 @@ span.error {
   border-radius: 2rem;
   padding: 10px;
   font-weight: 600;
-  background-color: rgb(255, 212, 212);
+  background-color: #e72424;
   border: 3px solid #e72424;
-  color: #e72424;
+  color: #ffffff;
   margin: 10px;
 }
 
 .clear-cart:hover {
-  background-color: #d23131;
+  background-color: #e72424;
   color: white;
   font-weight: 600;
   font-size: 1rem;
