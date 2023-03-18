@@ -7,7 +7,7 @@ html, body {
   }
 
 body {
-    background-image: url('/logos/background-image-sl.jpg');
+    background-image: url('./logos/background-image-sl.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
