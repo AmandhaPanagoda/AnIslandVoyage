@@ -31,10 +31,41 @@ itemNameArray.forEach((element, index) => {
 const c = qty.map((num, index) => num * price[index]);
 const totalPriceAllItems = c.reduce((acc, val) => acc + val, 0);
 
-console.log(totalPriceAllItems);
+console.log(totalPriceAllItems); //bug fixing - to check if total works
 document.getElementById("totalPriceAllItems").textContent = totalPriceAllItems.toFixed(2);
-document.getElementById("referenceNum").innerHTML = Math.floor(Math.random() * 90000847512) + 10000847512;
+const referenceNum = Math.floor(Math.random() * 90000847512) + 10000847512;
+document.getElementById("referenceNum").innerHTML = referenceNum;
 document.getElementById("date-time").innerHTML=new Date();
+
+
+document.getElementById("download").addEventListener("click", PDFquote);
+
+function PDFquote() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.addFont("Poppins-Regular.ttf", "Poppins","normal");
+  doc.setFont("Poppins","normal");
+
+  let tot = "Total = $"+totalPriceAllItems.toString();
+  let ref = "Reference number: #"+referenceNum.toString();
+  let name = "Name: "+ getParameterByName('user-name');
+
+  doc.text(name, 10, 30);
+  doc.text(ref, 10, 20);
+  doc.text(tot,10,10);
+  doc.text("Your Item List", 10, 50);
+
+  doc.setFontSize(12);
+  let coordinate = 60;
+  for (let i = 0; i < itemNameArray.length; i++) {
+    let itemName = itemNameArray[i];
+    let itemQty = qty[i];
+    let itemPrice = price[i];
+    let lineText = `${itemName} x${itemQty} = $${itemPrice}`;
+    doc.text(lineText, 10, coordinate + (i * 10));
+  }
+  doc.save("invoice.pdf");
+}
 
 // Function to get the value of a URL parameter by name
 function getParameterByName(name, url) {
@@ -175,6 +206,7 @@ function initializeForm() {
 });
     
   // Show error message when input is blurred
+  //reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
   nameInput.addEventListener('blur', () => {
     const name = nameInput.value;
     if (!name || /^\d+$/.test(name)) {
@@ -265,3 +297,5 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+

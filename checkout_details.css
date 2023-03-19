@@ -39,6 +39,20 @@ pre {
   margin: 0px;
 }
 
+#download {
+  border: none;
+  background: none;
+  padding: 20px;
+  padding-left: 0;
+  font-weight: 500;
+  color: #4026a9;
+}
+
+#download:hover {
+  color: #04a96d;
+}
+
+
 .details-container {
     display: flex;
     column-gap: 40px;

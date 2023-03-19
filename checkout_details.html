@@ -10,9 +10,13 @@
 
     <!--Navigation bar CSS-->
     <link rel="stylesheet" href="navigation.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
     <!--Favicon-->
     <link rel="icon" href="./logos/icon.png?" type="image/x-icon">
+
+    <!--jsPDF CDN-->
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </head>
 <body>
@@ -32,172 +36,176 @@
 <!--Navigation Bar ends here-->
 
   <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></button>
+
   <div class = "content-container">
-  <h3>Order Summary</h3>
-  <pre><span class="ref">Reference Number : </span><span>#</span><span id="referenceNum"></span></pre>  
-  <pre><span class="ref">Date & Time               : </span><span id="date-time"></span></pre>
-  <pre><span class="ref">Total Price                   : </span><span>$</span><span id="totalPriceAllItems"></span></pre><br>
+    <div id="PDFcontent">
+      <h3>Order Summary</h3>
+      <pre><span class="ref">Reference Number : </span><span>#</span><span id="referenceNum"></span></pre>  
+      <pre><span class="ref">Date & Time               : </span><span id="date-time"></span></pre>
+      <pre><span class="ref">Total Price                   : </span><span>$</span><span id="totalPriceAllItems"></span></pre><br>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Item Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody id="cartItemTableBody">
-      <!-- Rows of the cart items will be added here -->
-    </tbody>
-  </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="cartItemTableBody">
+          <!-- Rows of the cart items will be added here -->
+        </tbody>
+      </table>
+      <button id= "download"><i class="fa fa-arrow-down"></i> download invoice</button>
+    </div>
 
-  <form id="billing-info-form">
-    <div class="details-container">
-      <div class="column">
-        <h3>Billing Address</h3><br>
-            <label for="user-name"><i class="fa fa-user"></i> Full Name<span class="required">*</span></label>
-            <input type="text" id="user-name" name="user-name" placeholder="John More Doe">
-            <span class="error"></span>
-            
-            <label for="email"><i class="fa fa-envelope"></i> Email<span class="required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="dummy@email.com">
-            <span class="error"></span>
-            
-            <label for="contact"><i class="fa fa-phone"></i> Contact Number<span class="required">*</span></label>
-            <input type="tel" id="contact" name="contact" placeholder="07XXXXXXXX">
-            <span class="error"></span>
-            
-            <label for="address"><i class="fa fa-home"></i> Address<span class="required">*</span></label>
-            <input type="text" id="address" name="address" placeholder="12A Queens Road">
-            <span class="error"></span>
+    <form id="billing-info-form">
+      <div class="details-container">
+        <div class="column">
+          <h3>Billing Address</h3><br>
+              <label for="user-name"><i class="fa fa-user"></i> Full Name<span class="required">*</span></label>
+              <input type="text" id="user-name" name="user-name" placeholder="John More Doe">
+              <span class="error"></span>
+              
+              <label for="email"><i class="fa fa-envelope"></i> Email<span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="dummy@email.com">
+              <span class="error"></span>
+              
+              <label for="contact"><i class="fa fa-phone"></i> Contact Number<span class="required">*</span></label>
+              <input type="tel" id="contact" name="contact" placeholder="07XXXXXXXX">
+              <span class="error"></span>
+              
+              <label for="address"><i class="fa fa-home"></i> Address<span class="required">*</span></label>
+              <input type="text" id="address" name="address" placeholder="12A Queens Road">
+              <span class="error"></span>
 
-            <label for="address2"><i class="fa fa-home"></i> Address 2<small> (optional)</small></label>
-            <input type="text" id="address2" name="address2">
-            <span class="error"></span>
-            <div class="dropdown-container">
-              <div class="dp-container2">
-                <label for="district"><i class="fa fa-institution"></i> District<span class="required">*</span></label>
-                <select name="district" id="district" required>
-                  <option value="Ampara">Ampara</option>
-                  <option value="Anuradhapura">Anuradhapura</option>
-                  <option value="Badulla">Badulla</option>
-                  <option value="Batticaloa">Batticaloa</option>
-                  <option value="Colombo">Colombo</option>
-                  <option value="Galle">Galle</option>
-                  <option value="Gampaha">Gampaha</option>
-                  <option value="Hambantota">Hambantota</option>
-                  <option value="Jaffna">Jaffna</option>
-                  <option value="Kalutara">Kalutara</option>
-                  <option value="Kandy">Kandy</option>
-                  <option value="Kegalle">Kegalle</option>
-                  <option value="Kilinochchi">Kilinochchi</option>
-                  <option value="Kurunegala">Kurunegala</option>
-                  <option value="Mannar">Mannar</option>
-                  <option value="Matale">Matale</option>
-                  <option value="Matara">Matara</option>
-                  <option value="Monaragala">Monaragala</option>
-                  <option value="Mullaitivu">Mullaitivu</option>
-                  <option value="Nuwara Eliya">Nuwara Eliya</option>
-                  <option value="Polonnaruwa">Polonnaruwa</option>
-                  <option value="Puttalam">Puttalam</option>
-                  <option value="Ratnapura">Ratnapura</option>
-                  <option value="Trincomalee">Trincomalee</option>
-                  <option value="Vavuniya">Vavuniya</option>
-                </select>
+              <label for="address2"><i class="fa fa-home"></i> Address 2<small> (optional)</small></label>
+              <input type="text" id="address2" name="address2">
+              <span class="error"></span>
+              <div class="dropdown-container">
+                <div class="dp-container2">
+                  <label for="district"><i class="fa fa-institution"></i> District<span class="required">*</span></label>
+                  <select name="district" id="district" required>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Anuradhapura">Anuradhapura</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Batticaloa">Batticaloa</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Hambantota">Hambantota</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Kalutara">Kalutara</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Kilinochchi">Kilinochchi</option>
+                    <option value="Kurunegala">Kurunegala</option>
+                    <option value="Mannar">Mannar</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Monaragala">Monaragala</option>
+                    <option value="Mullaitivu">Mullaitivu</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Polonnaruwa">Polonnaruwa</option>
+                    <option value="Puttalam">Puttalam</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                    <option value="Vavuniya">Vavuniya</option>
+                  </select>
+                </div>
+
+                <div class="dp-container2">
+                  <label for="state"><i class="fa fa-map-signs"></i> Province<span class="required">*</span></label>
+                  <select name="province" id="province" required>
+                    <option value="Central Province">Central Province</option>
+                    <option value="Eastern Province">Eastern Province</option>
+                    <option value="Northern Province">Northern Province</option>
+                    <option value="North Central Province">North Central Province</option>
+                    <option value="North Western Province">North Western Province</option>
+                    <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+                    <option value="Southern Province">Southern Province</option>
+                    <option value="Uva Province">Uva Province</option>
+                    <option value="Western Province">Western Province</option>
+                  </select>
+                </div>
               </div>
 
-              <div class="dp-container2">
-                <label for="state"><i class="fa fa-map-signs"></i> Province<span class="required">*</span></label>
-                <select name="province" id="province" required>
-                  <option value="Central Province">Central Province</option>
-                  <option value="Eastern Province">Eastern Province</option>
-                  <option value="Northern Province">Northern Province</option>
-                  <option value="North Central Province">North Central Province</option>
-                  <option value="North Western Province">North Western Province</option>
-                  <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
-                  <option value="Southern Province">Southern Province</option>
-                  <option value="Uva Province">Uva Province</option>
-                  <option value="Western Province">Western Province</option>
-                </select>
-              </div>
-            </div>
-
-            <label for="postcode"><i class="fa fa-map-pin"></i> Postcode<span class="required">*</span></label>
-            <input type="text" id="postcode" name="postcode" placeholder="10001">
-            <span class="error"></span>
-      </div>
-      <div class="column">
-        <h3>Payment Details</h3>
-        <div class="icon-container">
-          <i class="fa fa-cc-visa" style="color:navy;"></i>
-          <i class="fa fa-cc-amex" style="color:blue;"></i>
-          <i class="fa fa-cc-mastercard" style="color:red;"></i>
-          <i class="fa fa-cc-discover" style="color:orange;"></i>
+              <label for="postcode"><i class="fa fa-map-pin"></i> Postcode<span class="required">*</span></label>
+              <input type="text" id="postcode" name="postcode" placeholder="10001">
+              <span class="error"></span>
         </div>
-        <label for="cname">Card Holder's Name<span class="required">*</span></label>
-        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-        <span class="error"></span>
-        
-        <label for="ccnum">Card Number<span class="required">*</span></label>
-        <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX">
-        <span class="error"></span>
-
-        <label for="cvv">Security Code<span class="required">*</span></label>
-        <input type="text" id="cvv" name="cvv" placeholder="352">
-        <span class="error"></span>
-        
-        <div class="dropdown-container">
-          <div class="dp-container2">
-            <label for="expmonth">Exp Month<span class="required">*</span></label>
-            <select name="expmonth" id="expmonth" required>
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
+        <div class="column">
+          <h3>Payment Details</h3>
+          <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy;"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
           </div>
+          <label for="cname">Card Holder's Name<span class="required">*</span></label>
+          <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+          <span class="error"></span>
           
-          <div class="dp-container2">
-            <label for="expyear">Exp Year<span class="required">*</span></label>
-            <select name="expyear" id="expyear" required>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-              <option value="2029">2029</option>
-              <option value="2030">2030</option>
-              <option value="2031">2031</option>
-              <option value="2032">2032</option>
-              <option value="2033">2033</option>
-            </select>
+          <label for="ccnum">Card Number<span class="required">*</span></label>
+          <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX">
+          <span class="error"></span>
+
+          <label for="cvv">Security Code<span class="required">*</span></label>
+          <input type="text" id="cvv" name="cvv" placeholder="352">
+          <span class="error"></span>
+          
+          <div class="dropdown-container">
+            <div class="dp-container2">
+              <label for="expmonth">Exp Month<span class="required">*</span></label>
+              <select name="expmonth" id="expmonth" required>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+            
+            <div class="dp-container2">
+              <label for="expyear">Exp Year<span class="required">*</span></label>
+              <select name="expyear" id="expyear" required>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="submit-reset">
-      <button type="reset" name="resetbutton" id="resetbutton" value="Clear All">Clear All</button>
-      <button type="submit" name="placeorderbutton" id="placeorderbutton" value="Place Order">Place Order</button>
-    </div>
-  </form>
+      <div class="submit-reset">
+        <button type="reset" name="resetbutton" id="resetbutton" value="Clear All">Clear All</button>
+        <button type="submit" name="placeorderbutton" id="placeorderbutton" value="Place Order">Place Order</button>
+      </div>
+    </form>
   </div>
+
   <footer class="footer">
     <p>Done By: <a href="Amandha.html">Amandha Panagoda</a></p>
   </footer>
 
-   
-    <script src="checkout_details.js"></script>
-    <script>
-      initializeForm();
-    </script>
+  <script src="checkout_details.js"></script>
+  <script>
+    initializeForm();
+  </script>
 </body>
 </html>
