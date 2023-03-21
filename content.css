@@ -21,16 +21,51 @@ h1 {
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: rgb(255, 255, 255); 
+  background-color: transparent; 
   color: rgb(0, 0, 0); 
   cursor: pointer; 
-  border-radius: 50%;
+  border-radius: 50px;
   width: 40px;
+  text-shadow: 0 0.5px 1px #2a2828;
 }
 
 #back-to-top:hover {
-  background-color: #0a0a0a; 
-  color: white;
+  background-color: transparent; 
+  color: #F71735;
+  text-shadow: 0 0.5px 1px #2a2828;
+}
+
+.anchors {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  position: fixed;
+  bottom: 150px; 
+  right: 0px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+
+}
+
+.anchors button {
+  margin-top: 2px;
+  border-radius: 50px;
+  padding: 6px;
+  text-transform: lowercase;
+  border: none;
+  background-color: #F18701;
+}
+
+.anchors button:hover {
+  border: 0.5px solid #B88B4A;
+  background-color: #B88B4A;
+}
+
+.anchors a{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .footer {
@@ -63,7 +98,11 @@ section {
   grid-gap: 10px;
 }
 
-.culture .grid-item1 {
+
+
+/***************************************************** CULTURE IN SRI LANKA IMAGES ******************************************************/
+
+#culture .grid-item1 {
   background-image: url("https://viajesbeagle.com/wp-content/uploads/2021/07/ciudades-sri-lanka.jpg");
   background-size: cover;
   background-position: center;
@@ -71,7 +110,7 @@ section {
   grid-row: 1/2;
 }
 
-.culture .grid-item2 {
+#culture .grid-item2 {
   background-image: url("https://www.worldatlas.com/r/w960-q80/upload/f2/56/3a/shutterstock-470724314.jpg");
   background-size: cover;
   background-position: center;
@@ -79,7 +118,7 @@ section {
   grid-row: 2/5;
 }
 
-.culture .grid-item3 {
+#culture .grid-item3 {
   background-image: url("https://srilankatourisminfo.com/wp-content/uploads/2019/01/image-result-for-masks-in-sri-lanka.jpeg");
   background-size: cover;
   background-position: center;
@@ -87,7 +126,7 @@ section {
   grid-row: 5/5;
 }
 
-.culture .grid-item4 {
+#culture .grid-item4 {
   background-image: url("https://live.staticflickr.com/5667/21226364795_982f1d35ca_b.jpg");
   background-size: cover;
   background-position: center;
@@ -95,7 +134,7 @@ section {
   grid-row: 2/5;
 }
 
-.culture .grid-item5 {
+#culture .grid-item5 {
   background-image: url("https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.ft.lk/assets/uploads/image_c574ca761e.jpg");
   background-size: cover;
   background-position: center;
@@ -103,7 +142,7 @@ section {
   grid-row: 1/3;
 }
 
-.culture .grid-item6 {
+#culture .grid-item6 {
   background-image: url("https://www.helankavacations.com/sri-lanka-tour-package/images/HeritageSriLanka-InnerBanner.jpg");
   background-size: cover;
   background-position: center;
@@ -111,7 +150,7 @@ section {
   grid-row: 3/5;
 }
 
-.culture .grid-item7 {
+#culture .grid-item7 {
   background-image: url("https://w0.peakpx.com/wallpaper/874/471/HD-wallpaper-sri-lanka-mask-creed-mobile-origins-skull-skulls-srilanka-traditional.jpg");
   background-size: cover;
   background-position: center;
@@ -119,7 +158,7 @@ section {
   grid-row: 3/6;
 }
 
-.culture .grid-item8 {
+#culture .grid-item8 {
   background-image: url("https://wp.missmalini.com/wp-content/uploads/2014/04/image-1-1.jpg");
   background-size: cover;
   background-position: center;
@@ -127,7 +166,11 @@ section {
   grid-row: 1/6;
 }
 
-.cuisine .grid-item1 {
+
+
+/***************************************************** CUISINE IN SRI LANKA IMAGES ******************************************************/
+
+#cuisine .grid-item1 {
   background-image: url("https://img.traveltriangle.com/blog/wp-content/uploads/2017/08/rsz_shutterstock_437677426.jpg");
   background-size: cover;
   background-position: center;
@@ -135,7 +178,7 @@ section {
   grid-row: 1/2;
 }
 
-.cuisine .grid-item2 {
+#cuisine .grid-item2 {
   background-image: url("https://srilankatourisminfo.com/wp-content/uploads/2019/02/image-result-for-ministry-of-crab-1.png");
   background-size: cover;
   background-position: center;
@@ -143,7 +186,7 @@ section {
   grid-row: 2/5;
 }
 
-.cuisine .grid-item3 {
+#cuisine .grid-item3 {
   background-image: url("https://nomadparadise.com/wp-content/uploads/2021/05/sri-lankan-food-07.jpg");
   background-size: cover;
   background-position: center;
@@ -151,7 +194,7 @@ section {
   grid-row: 5/5;
 }
 
-.cuisine .grid-item4 {
+#cuisine .grid-item4 {
   background-image: url("https://www.hlimg.com/images/stories/738X538/main-image_1549685441-1350e.jpg");
   background-size: cover;
   background-position: center;
@@ -159,7 +202,7 @@ section {
   grid-row: 2/5;
 }
 
-.cuisine .grid-item5 {
+#cuisine .grid-item5 {
   background-image: url("https://shop.hiltoncolombo1.com/image/cache/catalog/Family%20packages/Sri%20Lankan%20Cuisine/Srilankan-Cuisine-Pork-Hilton-Colombo-2-800x800.jpg");
   background-size: cover;
   background-position: center;
@@ -167,7 +210,7 @@ section {
   grid-row: 1/3;
 }
 
-.cuisine .grid-item6 {
+#cuisine .grid-item6 {
   background-image: url("https://www.tastepak.com/images/p/sri-lankan-cuisine.jpg");
   background-size: cover;
   background-position: center;
@@ -175,7 +218,7 @@ section {
   grid-row: 3/5;
 }
 
-.cuisine .grid-item7 {
+#cuisine .grid-item7 {
   background-image: url("https://srilankaholidayguru.com/wp-content/uploads/2018/11/tea-types-sr-lanka-tea.jpg");
   background-size: cover;
   background-position: center;
@@ -183,7 +226,7 @@ section {
   grid-row: 3/6;
 }
 
-.cuisine .grid-item8 {
+#cuisine .grid-item8 {
   background-image: url("https://www.theflavorbender.com/wp-content/uploads/2018/03/Chicken-Kottu-Roti-The-Flavor-Bender-Featured-Image-SQ-8.jpg");
   background-size: cover;
   background-position: center;
@@ -191,7 +234,11 @@ section {
   grid-row: 1/6;
 }
 
-.festivals .grid-item1 {
+
+
+/***************************************************** FESTIVALS IN SRI LANKA IMAGES ******************************************************/
+
+#festivals .grid-item1 {
   background-image: url("http://blog.cinnamonhotels.com/wp-content/uploads/2022/04/D3R5942-1.jpg");
   background-size: cover;
   background-position: center;
@@ -199,7 +246,7 @@ section {
   grid-row: 1/2;
 }
 
-.festivals .grid-item2 {
+#festivals .grid-item2 {
   background-image: url("https://live.staticflickr.com/255/31116419854_b10939104c_b.jpg");
   background-size: cover;
   background-position: center;
@@ -207,7 +254,7 @@ section {
   grid-row: 2/5;
 }
 
-.festivals .grid-item3 {
+#festivals .grid-item3 {
   background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2021/03/Ramadan-the-Amazing-Festival-of-Joy.jpg");
   background-size: cover;
   background-position: center;
@@ -215,7 +262,7 @@ section {
   grid-row: 5/5;
 }
 
-.festivals .grid-item4 {
+#festivals .grid-item4 {
   background-image: url("https://www.thekingsburyhotel.com/blog/wp-content/uploads/sites/3/2020/01/Thai-Pongal-in-Sri-Lanka.jpg");
   background-size: cover;
   background-position: center;
@@ -223,7 +270,7 @@ section {
   grid-row: 2/5;
 }
 
-.festivals .grid-item5 {
+#festivals .grid-item5 {
   background-image: url("https://media.timeout.com/images/103836280/image.jpg");
   background-size: cover;
   background-position: center;
@@ -231,7 +278,7 @@ section {
   grid-row: 1/3;
 }
 
-.festivals .grid-item6 {
+#festivals .grid-item6 {
   background-image: url("https://www.swantour.com/blogs/wp-content/uploads/2019/03/Sri-Lanka-Festivals.jpg");
   background-size: cover;
   background-position: center;
@@ -239,7 +286,7 @@ section {
   grid-row: 3/5;
 }
 
-.festivals .grid-item7 {
+#festivals .grid-item7 {
   background-image: url("https://www.thekingsburyhotel.com/blog/wp-content/uploads/sites/3/2018/08/Sinhala-and-Tamil-New-Year-Celebrations-in-Sri-Lanka.jpg");
   background-size: cover;
   background-position: center;
@@ -247,8 +294,148 @@ section {
   grid-row: 3/6;
 }
 
-.festivals .grid-item8 {
+#festivals .grid-item8 {
   background-image: url("https://srilankaembassy.fr/sites/default/files/files/users/user137/esala-perahera.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+
+/***************************************************** BEACHES IN SRI LANKA IMAGES ******************************************************/
+
+#beaches .grid-item1 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#beaches .grid-item2 {
+  background-image: url("https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/11/Intrepid-Travel-sri-lanka_unawatuna_beach-e1511415769473.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#beaches .grid-item3 {
+  background-image: url("https://et-website.s3.amazonaws.com/uploads/2015/05/sri-lanka-galle-beaches-3.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#beaches .grid-item4 {
+  background-image: url("https://www.thecoastalcampaign.com/wp-content/uploads/2019/10/DJI_0207-2.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#beaches .grid-item5 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#beaches .grid-item6 {
+  background-image: url("https://www.thesrilankatravelblog.com/wp-content/uploads/2022/02/sri-lanka-a-surfers-guide-new-header.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#beaches .grid-item7 {
+  background-image: url("https://cinnamonweb.blob.core.windows.net/cinnamonweb-prd/dining_wellness/snorkelling-at-pigeon-island-Hikka-tranz-530X420.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#beaches .grid-item8 {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/596b2969d2b85786e6892853/1533121452336-4TZ6S7UV5I7GEWJYLZHT/The+rope+swing+at+Dalawella+Beach%2C+Sri+Lanka");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+
+/***************************************************** WILDLIFE IN SRI LANKA IMAGES ******************************************************/
+
+
+
+/***************************************************** MONUMENTS IN SRI LANKA IMAGES ******************************************************/
+
+#monuments .grid-item1 {
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/f7/8f/eb/polonnaruwa-vatadage.jpg?w=500&h=400&s=1");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#monuments .grid-item2 {
+  background-image: url("https://www.img.urlaub-sr-lanka.info/2013/05/tiwanka.gif");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#monuments .grid-item3 {
+  background-image: url("https://www.talesofceylon.com/wp-content/uploads/2019/10/Art-Sculpture-and-Poetry.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#monuments .grid-item4 {
+  background-image: url("https://sometimes-interesting.com/wp-content/uploads/2014/02/sigiriya-01.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#monuments .grid-item5 {
+  background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Sri-Dalada-Maligawa.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#monuments .grid-item6 {
+  background-image: url("https://w0.peakpx.com/wallpaper/817/971/HD-wallpaper-buddhism-sri-lanka-ancient-art-art-history-sri-lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#monuments .grid-item7 {
+  background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Old-Parliament-Building.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#monuments .grid-item8 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/Nallur_Kandasamy_front_entrance.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 6/8;
