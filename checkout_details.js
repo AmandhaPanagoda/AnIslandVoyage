@@ -200,7 +200,7 @@ function initializeForm() {
       if (confirmed) {
         window.location.href = 'buy_products.html';
       } else {
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
       }
     }
 });
