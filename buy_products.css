@@ -101,15 +101,15 @@ body {
     font-weight: 400;
   }
   
-.product .quantity-label {
+.product label {
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 0.8px;
+    color: #525151;
   }
   
 .product .quantity {
     color: navy;
-    border-color: navy;
     border: 1px;
     font-size: 13px;
     padding: 5px;
@@ -126,7 +126,7 @@ body {
   }
   
 .product button.add-to-cart {
-    background-color: #4CAF50;
+    background-color: #b89d18;
     letter-spacing: 1px;
     font-weight: 700;
     align-content: flex-end;
