@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
   }
   
-  .splash-screen {
+.splash-screen {
     background-color: #be5f3c88;
     position: fixed;
     top: 50%;
@@ -25,30 +25,30 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 2);
   }
   
-  .logo {
+.logo {
     width: 100px;
   }
   
-  h1,h2,p {
+h1,h2,p {
     color: #fff;
     margin-bottom: 20px;
   }
 
-  h1 {
+h1 {
     font-size: 34px;
   }
 
-  h2 {
+h2 {
     font-size: 30px;
   }
   
-  ul {
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  li {
+li {
     color: #fff;
     font-size: 20px;
     margin-bottom: 10px;

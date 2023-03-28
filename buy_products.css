@@ -10,22 +10,7 @@ body {
     margin-top: 70px;
   }
 
-.footer {
-    display: flex;
-    bottom:0; 
-    width:100%; 
-    height: 70px;
-    background-color: #2C74B3;
-    font-weight: 500;
-    color: #070707;
-    align-items: center;
-    justify-content: center;
-  }
-  
-.footer a {
-      color: rgb(0, 22, 24);
-      font-style: italic;
-  }
+
   
 /* Create two unequal columns that floats next to each other */
 .column {
@@ -46,7 +31,8 @@ body {
     height: 2000px;
   }
 
-/* Product container styles*/
+/***********************Product card styles*************************/
+
 .product-container {
     display: flex;
     flex-direction: row;
@@ -143,7 +129,8 @@ body {
       opacity: 0.7;
     }
 
-/* Summary styles*/
+/***********************Cart Items summary*************************/
+
 .order-summary {
     height: 100%;
     background-color: #f2f2f2;
@@ -170,7 +157,7 @@ body {
     transition: all .3s ease; 
     outline: none;
 }
-  
+/*Input field styles*/
 .order-summary input:focus{
       border-color: #010378;
     }  
@@ -180,6 +167,7 @@ span.required {
     color: red;
   }
 
+/*error message styles*/
 span.error {
     color: red;
     font-size: 12px;
@@ -199,7 +187,8 @@ span.error {
     margin-bottom: 10px;
   }
 
-/*checkout button*/
+/***********************Check out button*************************/
+
 .checkout {
   border-radius: 2rem;
   padding: 10px;
@@ -221,7 +210,8 @@ span.error {
     opacity: 0.5;
   }
 
-/*clear cart button*/
+/***********************Clear cart button*************************/
+
 .clear-cart {
   border-radius: 2rem;
   padding: 10px;
@@ -239,7 +229,8 @@ span.error {
   font-size: 1rem;
 }
 
-/* Slideshow styles */
+/***********************Slideshow styles*************************/
+
 .slideshow-container {
   width: fit-content;
   position: relative;
@@ -291,6 +282,7 @@ span.error {
   from {opacity: 0.4}
   to {opacity: 1}
 }
+/***********************Back to top button*************************/
 
 #back-to-top {
   position: fixed; 
@@ -311,4 +303,22 @@ span.error {
   background-color: transparent; 
   color: #F71735;
   text-shadow: 0 0.5px 1px #2a2828;
+}
+
+/***********************Footer styles*************************/
+.footer {
+  display: flex;
+  bottom:0; 
+  width:100%; 
+  height: 70px;
+  background-color: #2C74B3;
+  font-weight: 500;
+  color: #070707;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+    color: rgb(0, 22, 24);
+    font-style: italic;
 }

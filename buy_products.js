@@ -46,6 +46,7 @@ function addToCart(event) {
   updateCart();
 }
 
+// updates the cart every time add to cart is clicked
 function updateCart() {
   let totalPrice = 0;
   let cartItemsString = "";
@@ -64,15 +65,15 @@ function updateCart() {
   totalElem.innerText = `Total: $${totalPrice.toFixed(2)}`; //updates the total
   cartItemsElem.innerHTML = cartItemsString;
   
-  if (totalPrice === 0) {
+  if (totalPrice === 0) { // display alert when total is 0/no items in the cart
     checkoutButton.classList.add("disabled");
     checkoutButton.disabled = true;
-    alert("Your cart is empty! Please choose some items.");
+    alert("Your cart is empty! Please choose some items."); 
   } else {
     checkoutButton.classList.remove("disabled");
     checkoutButton.disabled = false;
     const nameArray = cartItems.map(item => item.name);
-    localStorage.setItem("itemNameArray", JSON.stringify(nameArray));
+    localStorage.setItem("itemNameArray", JSON.stringify(nameArray)); //save all the cart items in JSON
 
     const quantityArray = cartItems.map(item => item.quantity);
     localStorage.setItem("quantityArray", JSON.stringify(quantityArray));
@@ -82,14 +83,15 @@ function updateCart() {
   }
 }
 
+//clear cart function
 function clearCart() {
   cartItems = [];
   updateCart();
   const quantityInputs = document.querySelectorAll(".quantity");
   for (let i = 0; i < quantityInputs.length; i++) {
-    quantityInputs[i].value = 0;
+    quantityInputs[i].value = 0; //set all quantities to 0
   }
-  document.getElementById("checkout-form").reset();
+  document.getElementById("checkout-form").reset(); //clear the user details
 }
 
 // form elements
