@@ -378,7 +378,7 @@ section {
 
 /***************************************************** MONUMENTS IN SRI LANKA IMAGES ******************************************************/
 
-#monuments .grid-item1 {
+#historical .grid-item1 {
   background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/f7/8f/eb/polonnaruwa-vatadage.jpg?w=500&h=400&s=1");
   background-size: cover;
   background-position: center;
@@ -386,7 +386,7 @@ section {
   grid-row: 1/2;
 }
 
-#monuments .grid-item2 {
+#historical .grid-item2 {
   background-image: url("https://www.img.urlaub-sr-lanka.info/2013/05/tiwanka.gif");
   background-size: cover;
   background-position: center;
@@ -394,7 +394,7 @@ section {
   grid-row: 2/5;
 }
 
-#monuments .grid-item3 {
+#historical .grid-item3 {
   background-image: url("https://www.talesofceylon.com/wp-content/uploads/2019/10/Art-Sculpture-and-Poetry.jpg");
   background-size: cover;
   background-position: center;
@@ -402,7 +402,7 @@ section {
   grid-row: 5/5;
 }
 
-#monuments .grid-item4 {
+#historical .grid-item4 {
   background-image: url("https://sometimes-interesting.com/wp-content/uploads/2014/02/sigiriya-01.jpg");
   background-size: cover;
   background-position: center;
@@ -410,7 +410,7 @@ section {
   grid-row: 2/5;
 }
 
-#monuments .grid-item5 {
+#historical .grid-item5 {
   background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Sri-Dalada-Maligawa.jpg");
   background-size: cover;
   background-position: center;
@@ -418,7 +418,7 @@ section {
   grid-row: 1/3;
 }
 
-#monuments .grid-item6 {
+#historical .grid-item6 {
   background-image: url("https://w0.peakpx.com/wallpaper/817/971/HD-wallpaper-buddhism-sri-lanka-ancient-art-art-history-sri-lanka.jpg");
   background-size: cover;
   background-position: center;
@@ -426,7 +426,7 @@ section {
   grid-row: 3/5;
 }
 
-#monuments .grid-item7 {
+#historical .grid-item7 {
   background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Old-Parliament-Building.jpg");
   background-size: cover;
   background-position: center;
@@ -434,7 +434,7 @@ section {
   grid-row: 3/6;
 }
 
-#monuments .grid-item8 {
+#historical .grid-item8 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/Nallur_Kandasamy_front_entrance.jpg");
   background-size: cover;
   background-position: center;
