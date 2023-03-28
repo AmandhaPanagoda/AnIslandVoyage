@@ -10,10 +10,88 @@ body {
 }
 
 
-.mainIntro{
-  
-    padding-top: 250px;
-    padding-left: 150px;
-    padding-right: 850px;
-    /*background-color: #d1d1d878;*/
+.contents{
+    background-color: #ffffff;
+    width: 400px;
+    height:450px;
+    box-shadow: 0 4px 8px 0 #ffffff;
+    border-radius:10px;
+    transition: 0.3s;
+    padding-left:35px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+   
+
 }
+      
+ /* On mouse-over, add a deeper shadow */
+.images:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+      
+.culture{
+    background-color: #ffffff;
+    width: 350px;
+    height:350px;
+}
+.wildlife{
+    background-color: #ffffff;
+    width: 350px;
+    height:350px;
+}
+.beaches{
+    background-color: #ffffff;
+    width: 350px;
+    height:350px
+ 
+}
+.festivals{
+    background-color: #ffffff;
+    width: 350px;
+    height:350px;
+}
+.monuments{
+    background-color: #ffffff;
+    width: 350px;
+    height:350px;
+}
+
+.image:hover{
+    background-color: #b6b6bb;
+}
+.active {
+    background-color: #b6b6bb;
+}
+
+.mainIntro{
+    
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    /*background-color: #d1d1d878;*/
+
+}
+.logo{
+    position: fixed;
+    float: right;
+    padding-top: 0;
+}
+.topic{
+    display:flex;
+    padding-top: 600;
+    padding-left: 200;
+
+}
+
+.topic{
+    margin-top: 100px;
+    margin-left:150px;
+}
+
+.content{
+    list-style-type:none ;
+}
+
+
