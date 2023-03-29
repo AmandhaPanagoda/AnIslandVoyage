@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+  margin: 0;
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+#back-to-top {
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: transparent; 
+  color: rgb(0, 0, 0); 
+  cursor: pointer; 
+  border-radius: 50px;
+  width: 40px;
+  text-shadow: 0 0.5px 1px #2a2828;
+}
+
+#back-to-top:hover {
+  background-color: transparent; 
+  color: #F71735;
+  text-shadow: 0 0.5px 1px #2a2828;
+}
+
+.anchors {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  position: fixed;
+  bottom: 150px; 
+  right: 0px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+
+}
+
+.anchors button {
+  margin-top: 2px;
+  border-radius: 50px;
+  padding: 6px;
+  text-transform: lowercase;
+  border: none;
+  background-color: #F18701;
+}
+
+.anchors button:hover {
+  border: 0.5px solid #B88B4A;
+  background-color: #B88B4A;
+}
+
+.anchors a{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  bottom:0; 
+  width:100%; 
+  height: 70px;
+  background-color: #2C74B3;
+  font-weight: 500;
+  color: #070707;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+    color: rgb(0, 22, 24);
+    font-style: italic;
+}
+
+section {
+  padding: 0px 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%;
+  height: 500px;
+  grid-gap: 10px;
+}
+
+
+
+/***************************************************** CULTURE IN SRI LANKA IMAGES ******************************************************/
+
+#culture .grid-item1 {
+  background-image: url("https://viajesbeagle.com/wp-content/uploads/2021/07/ciudades-sri-lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#culture .grid-item2 {
+  background-image: url("https://www.worldatlas.com/r/w960-q80/upload/f2/56/3a/shutterstock-470724314.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#culture .grid-item3 {
+  background-image: url("https://srilankatourisminfo.com/wp-content/uploads/2019/01/image-result-for-masks-in-sri-lanka.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#culture .grid-item4 {
+  background-image: url("https://live.staticflickr.com/5667/21226364795_982f1d35ca_b.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#culture .grid-item5 {
+  background-image: url("https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.ft.lk/assets/uploads/image_c574ca761e.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#culture .grid-item6 {
+  background-image: url("https://www.helankavacations.com/sri-lanka-tour-package/images/HeritageSriLanka-InnerBanner.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#culture .grid-item7 {
+  background-image: url("https://w0.peakpx.com/wallpaper/874/471/HD-wallpaper-sri-lanka-mask-creed-mobile-origins-skull-skulls-srilanka-traditional.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#culture .grid-item8 {
+  background-image: url("https://wp.missmalini.com/wp-content/uploads/2014/04/image-1-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+/***************************************************** CUISINE IN SRI LANKA IMAGES ******************************************************/
+
+#cuisine .grid-item1 {
+  background-image: url("https://img.traveltriangle.com/blog/wp-content/uploads/2017/08/rsz_shutterstock_437677426.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#cuisine .grid-item2 {
+  background-image: url("https://srilankatourisminfo.com/wp-content/uploads/2019/02/image-result-for-ministry-of-crab-1.png");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#cuisine .grid-item3 {
+  background-image: url("https://nomadparadise.com/wp-content/uploads/2021/05/sri-lankan-food-07.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#cuisine .grid-item4 {
+  background-image: url("https://www.hlimg.com/images/stories/738X538/main-image_1549685441-1350e.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#cuisine .grid-item5 {
+  background-image: url("https://shop.hiltoncolombo1.com/image/cache/catalog/Family%20packages/Sri%20Lankan%20Cuisine/Srilankan-Cuisine-Pork-Hilton-Colombo-2-800x800.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#cuisine .grid-item6 {
+  background-image: url("https://www.tastepak.com/images/p/sri-lankan-cuisine.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#cuisine .grid-item7 {
+  background-image: url("https://srilankaholidayguru.com/wp-content/uploads/2018/11/tea-types-sr-lanka-tea.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#cuisine .grid-item8 {
+  background-image: url("https://www.theflavorbender.com/wp-content/uploads/2018/03/Chicken-Kottu-Roti-The-Flavor-Bender-Featured-Image-SQ-8.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+
+/***************************************************** FESTIVALS IN SRI LANKA IMAGES ******************************************************/
+
+#festivals .grid-item1 {
+  background-image: url("http://blog.cinnamonhotels.com/wp-content/uploads/2022/04/D3R5942-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#festivals .grid-item2 {
+  background-image: url("https://live.staticflickr.com/255/31116419854_b10939104c_b.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#festivals .grid-item3 {
+  background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2021/03/Ramadan-the-Amazing-Festival-of-Joy.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#festivals .grid-item4 {
+  background-image: url("https://www.thekingsburyhotel.com/blog/wp-content/uploads/sites/3/2020/01/Thai-Pongal-in-Sri-Lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#festivals .grid-item5 {
+  background-image: url("https://media.timeout.com/images/103836280/image.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#festivals .grid-item6 {
+  background-image: url("https://www.swantour.com/blogs/wp-content/uploads/2019/03/Sri-Lanka-Festivals.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#festivals .grid-item7 {
+  background-image: url("https://www.thekingsburyhotel.com/blog/wp-content/uploads/sites/3/2018/08/Sinhala-and-Tamil-New-Year-Celebrations-in-Sri-Lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#festivals .grid-item8 {
+  background-image: url("https://srilankaembassy.fr/sites/default/files/files/users/user137/esala-perahera.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/**************************************************** PAGE STYLES ************************************************************************/
+.page-number-block {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

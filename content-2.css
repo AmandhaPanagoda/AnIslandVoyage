@@ -98,71 +98,79 @@ section {
   grid-gap: 10px;
 }
 
-/***************************************************** HISTORICAL PLACES IN SRI LANKA IMAGES ******************************************************/
+/***************************************************** BEACHES IN SRI LANKA IMAGES ******************************************************/
 
-#historical .grid-item1 {
-  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/f7/8f/eb/polonnaruwa-vatadage.jpg?w=500&h=400&s=1");
+#beaches .grid-item1 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
   background-size: cover;
   background-position: center;
   grid-column: 1/4;
   grid-row: 1/2;
 }
 
-#historical .grid-item2 {
-  background-image: url("https://www.img.urlaub-sr-lanka.info/2013/05/tiwanka.gif");
+#beaches .grid-item2 {
+  background-image: url("https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/11/Intrepid-Travel-sri-lanka_unawatuna_beach-e1511415769473.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/2;
   grid-row: 2/5;
 }
 
-#historical .grid-item3 {
-  background-image: url("https://www.talesofceylon.com/wp-content/uploads/2019/10/Art-Sculpture-and-Poetry.jpg");
+#beaches .grid-item3 {
+  background-image: url("https://et-website.s3.amazonaws.com/uploads/2015/05/sri-lanka-galle-beaches-3.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/5;
   grid-row: 5/5;
 }
 
-#historical .grid-item4 {
-  background-image: url("https://sometimes-interesting.com/wp-content/uploads/2014/02/sigiriya-01.jpg");
+#beaches .grid-item4 {
+  background-image: url("https://www.thecoastalcampaign.com/wp-content/uploads/2019/10/DJI_0207-2.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 2/4;
   grid-row: 2/5;
 }
 
-#historical .grid-item5 {
-  background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Sri-Dalada-Maligawa.jpg");
+#beaches .grid-item5 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
   background-size: cover;
   background-position: center;
   grid-column: 4/6;
   grid-row: 1/3;
 }
 
-#historical .grid-item6 {
-  background-image: url("https://w0.peakpx.com/wallpaper/817/971/HD-wallpaper-buddhism-sri-lanka-ancient-art-art-history-sri-lanka.jpg");
+#beaches .grid-item6 {
+  background-image: url("https://www.thesrilankatravelblog.com/wp-content/uploads/2022/02/sri-lanka-a-surfers-guide-new-header.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 4/5;
   grid-row: 3/5;
 }
 
-#historical .grid-item7 {
-  background-image: url("https://www.adequatetravel.com/blog/wp-content/uploads/2020/10/Old-Parliament-Building.jpg");
+#beaches .grid-item7 {
+  background-image: url("https://cinnamonweb.blob.core.windows.net/cinnamonweb-prd/dining_wellness/snorkelling-at-pigeon-island-Hikka-tranz-530X420.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 5/6;
   grid-row: 3/6;
 }
 
-#historical .grid-item8 {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/Nallur_Kandasamy_front_entrance.jpg");
+#beaches .grid-item8 {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/596b2969d2b85786e6892853/1533121452336-4TZ6S7UV5I7GEWJYLZHT/The+rope+swing+at+Dalawella+Beach%2C+Sri+Lanka");
   background-size: cover;
   background-position: center;
   grid-column: 6/8;
   grid-row: 1/6;
 }
+
+
+
+/***************************************************** WILDLIFE IN SRI LANKA IMAGES ******************************************************/
+
+
+
+
 
 /**************************************************** PAGE STYLES ************************************************************************/
 .page-number-block {
