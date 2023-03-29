@@ -164,6 +164,204 @@ section {
   grid-row: 1/6;
 }
 
+/***************************************************** CITYSCAPES IN SRI LANKA IMAGES ******************************************************/
+
+#cityscapes .grid-item1 {
+  background-image: url("https://images.unsplash.com/photo-1588245300911-bfddf050d738?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#cityscapes .grid-item2 {
+  background-image: url("https://images.unsplash.com/photo-1593459483414-1a7378bf6ce5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#cityscapes .grid-item3 {
+  background-image: url("https://collidecolumn.files.wordpress.com/2013/04/colombo-harbour-fort-at-night-image-courtesy-srilankan-airlines.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#cityscapes .grid-item4 {
+  background-image: url("https://live.staticflickr.com/4642/25622879348_0605f3a5f2_b.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#cityscapes .grid-item5 {
+  background-image: url("https://w0.peakpx.com/wallpaper/698/467/HD-wallpaper-colombo-sri-lanka-buildings-city-city-life-colombo-lake-lights-night-sky-space-sri-lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#cityscapes .grid-item6 {
+  background-image: url("https://images.unsplash.com/photo-1561212661-fc75694d58f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#cityscapes .grid-item7 {
+  background-image: url("https://images.unsplash.com/photo-1578159802020-13ec49d669df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#cityscapes .grid-item8 {
+  background-image: url("https://images.unsplash.com/photo-1623595289196-007a22dd8560?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/***************************************************** ADVENTURE IN SRI LANKA IMAGES ******************************************************/
+
+#adventure .grid-item1 {
+  background-image: url("https://ecotripadvise.com/wp-content/uploads/2022/01/6-Best-Water-Sport-Activities-in-Sri-Lanka-header-1024x453.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#adventure .grid-item2 {
+  background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/b6/97.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#adventure .grid-item3 {
+  background-image: url("https://df4gcsff7xjx7.cloudfront.net/2018/08/home-header-1-2.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#adventure .grid-item4 {
+  background-image: url("https://www.experiencetravelgroup.com/reposit/20200124112300.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#adventure .grid-item5 {
+  background-image: url("https://www.lemaastota.com/wp-content/uploads/2021/11/the-secret-ella-zipline-gallery-01.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#adventure .grid-item6 {
+  background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2021/07/A-foreign-boy-windsurfing-on-the-waves-enjoying-one-of-the-most-exciting-water-sports-in-Sri-Lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#adventure .grid-item7 {
+  background-image: url("https://www.thesrilankatravelblog.com/wp-content/uploads/2022/02/sri-lanka-a-surfers-guide-new-header.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#adventure .grid-item8 {
+  background-image: url("https://www.sazylankatours.com/wp-content/uploads/2022/08/Diving-and-Snorkeling-Sri-Lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/***************************************************** SAFARI IN SRI LANKA IMAGES ******************************************************/
+
+#safaris .grid-item1 {
+  background-image: url("https://nomadicboys.com/wp-content/uploads/2019/04/sri-lanka-safari.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#safaris .grid-item2 {
+  background-image: url("https://www.srilankadrivercarrent.com/wp-content/uploads/2021/02/Wildlife-Safari-Sri-Lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#safaris .grid-item3 {
+  background-image: url("https://www.webjet.co.nz/travel/wp-content/uploads/2019/01/Sri-Lanka-Safari-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#safaris .grid-item4 {
+  background-image: url("https://i.insider.com/5bae37ef9c5d678d218b456a?width=750&format=jpeg&auto=webp");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#safaris .grid-item5 {
+  background-image: url("https://monkeysandmountains.com/wp-content/uploads/2018/11/sri-lanka-6-l.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#safaris .grid-item6 {
+  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1920,h_1080,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ofpjn9i8ikjl1ey6l2dh/UdawalaweNationalParkSafariExperiencefromMirissa,SriLanka-Klook.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#safaris .grid-item7 {
+  background-image: url("https://www.divergenttravelers.com/wp-content/uploads/Best-Sri-Lanka-Safari-Comparison-guide.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#safaris .grid-item8 {
+  background-image: url("https://www.srilankatravelandtourism.com/places-sri-lanka/minneriya/minneriya-images/minneriya-6-sri-lanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
 /**************************************************** PAGE STYLES ************************************************************************/
 .page-number-block {
   text-align: center;
