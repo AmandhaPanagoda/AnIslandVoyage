@@ -14,6 +14,32 @@ h1 {
   font-size: 60px;
 }
 
+.page-title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  letter-spacing: 1px;
+  line-height:2
+}
+
+.page-title h1 {
+  background-image: url(https://media.tenor.com/FnrYIJAcRjoAAAAC/national-beach-day-waves.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 10px 0;
+}
+
+/********************************BACK TO TOP*******************************/
+
 #back-to-top {
   position: fixed; 
   bottom: 20px; 
@@ -35,6 +61,7 @@ h1 {
   text-shadow: 0 0.5px 1px #2a2828;
 }
 
+/********************************ANCHORS*******************************/
 .anchors {
   display: flex;
   flex-direction: column;
@@ -54,12 +81,12 @@ h1 {
   padding: 6px;
   text-transform: lowercase;
   border: none;
-  background-color: #F18701;
+  background-color: #0765c3;
 }
 
 .anchors button:hover {
-  border: 0.5px solid #B88B4A;
-  background-color: #B88B4A;
+  border: 0.5px solid #054b90;
+  background-color: #054b90;
 }
 
 .anchors a{
@@ -68,25 +95,38 @@ h1 {
   font-weight: 500;
 }
 
+/********************************FOOTER*******************************/
 .footer {
   display: flex;
   bottom:0; 
   width:100%; 
   height: 70px;
-  background-color: #2C74B3;
-  font-weight: 500;
-  color: #070707;
+  background-color: #144c7e;
+  font-weight: 300;
+  color: #fcfcfc;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.footer p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .footer a {
-    color: rgb(0, 22, 24);
+    color: #ffffff;
     font-style: italic;
+    font-weight: 500;
 }
 
+/********************************SECTIONS*******************************/
 section {
   padding: 0px 50px;
+}
+
+section h1 {
+  font-size: 60px;
+  color: #195284;
 }
 
 .grid {
@@ -365,6 +405,7 @@ section {
 /**************************************************** PAGE STYLES ************************************************************************/
 .page-number-block {
   text-align: center;
+  padding: 3px;
 }
 
 .pagination {
@@ -374,17 +415,22 @@ section {
 .pagination a {
   color: black;
   float: left;
-  padding: 8px 16px;
+  padding: 10px 18px;
   text-decoration: none;
   transition: background-color .3s;
   border: 1px solid #ddd;
   margin: 0 4px;
+  border-radius: 50px;
 }
 
 .pagination a.active {
-  background-color: #4CAF50;
+  background-color: #343834;
   color: white;
-  border: 1px solid #4CAF50;
+  border: 1px solid #343834;
+  border-radius: 50px;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {
+  background-color: #ffffff;
+  border: 1px solid #262726;
+}
