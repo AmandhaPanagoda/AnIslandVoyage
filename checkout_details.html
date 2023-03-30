@@ -24,8 +24,7 @@
 
 </head>
 <body>
-
-  <!--Navigation Bar starts-->
+  <!--Navigation Bar-->
   <nav class="navigation-bar">
     <img src="./logos/white-logo-transparent.png" alt="Logo" class="logo">
       <ul id = "pages">
@@ -37,12 +36,13 @@
           <li><a href="#" data-title="Student Details">Student Details</a></li>
       </ul>
   </nav>
-<!--Navigation Bar ends here-->
 
+  <!--Back to top button-->
   <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></button>
 
+  <!---->
   <div class = "content-container">
-    <div id="PDFcontent">
+    <div id="PDFcontent"> <!--This content can be downloaded as pdf as well-->
       <h3>Order Summary</h3>
       <pre><span class="ref">Reference Number : </span><span>#</span><span id="referenceNum"></span></pre>  
       <pre><span class="ref">Date & Time               : </span><span id="date-time"></span></pre>
@@ -60,7 +60,8 @@
           <!-- Rows of the cart items will be added here -->
         </tbody>
       </table>
-      <button id= "download"><i class="fa fa-arrow-down"></i> download invoice</button>
+      <!--Invoice pdf download button-->
+      <button id= "download"><i class="fa fa-arrow-down"></i> download invoice</button> 
     </div>
 
     <form id="billing-info-form">
@@ -116,6 +117,7 @@
                     <option value="Trincomalee">Trincomalee</option>
                     <option value="Vavuniya">Vavuniya</option>
                   </select>
+                  <span class="error"></span>
                 </div>
 
                 <div class="dp-container2">
@@ -203,8 +205,10 @@
     </form>
   </div>
 
+  <!--Footer-->
   <footer class="footer">
-    <p>Done By: <a href="Amandha.html">Amandha Panagoda</a></p>
+    <p>© 2023 Island Voyage</p>
+    <p>Done By: <a href="amandha.html">Amandha Panagoda</a></p>
   </footer>
 
   <script src="checkout_details.js"></script>

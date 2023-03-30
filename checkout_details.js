@@ -37,33 +37,35 @@ const referenceNum = Math.floor(Math.random() * 90000847512) + 10000847512;
 document.getElementById("referenceNum").innerHTML = referenceNum;
 document.getElementById("date-time").innerHTML=new Date();
 
-
 document.getElementById("download").addEventListener("click", PDFquote);
 
+// download invoice feature using jsPDF 
 function PDFquote() {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
-  doc.addFont("Poppins-Regular.ttf", "Poppins","normal");
-  doc.setFont("Poppins","normal");
 
   let tot = "Total = $"+totalPriceAllItems.toString();
   let ref = "Reference number: #"+referenceNum.toString();
   let name = "Name: "+ getParameterByName('user-name');
 
-  doc.text(name, 10, 30);
-  doc.text(ref, 10, 20);
-  doc.text(tot,10,10);
-  doc.text("Your Item List", 10, 50);
+  doc.setTextColor(28,58,179); //set color of the next texts
+  doc.text(tot, 10, 20);
+  doc.text(ref, 10, 30);
+  doc.text(name, 10, 40);
+  doc.text("Your Item List", 10, 60);
 
+  doc.setTextColor(0,0,0); //reset the color
   doc.setFontSize(12);
-  let coordinate = 60;
+  let coordinate = 70;
   for (let i = 0; i < itemNameArray.length; i++) {
     let itemName = itemNameArray[i];
     let itemQty = qty[i];
     let itemPrice = price[i];
-    let lineText = `${itemName} x${itemQty} = $${itemPrice}`;
+    let lineText = `${itemName} x ${itemQty} = $${itemPrice}`;
     doc.text(lineText, 10, coordinate + (i * 10));
   }
+
+  doc.text("Thank you for shopping with us!",70,150);
   doc.save("invoice.pdf");
 }
 
@@ -78,12 +80,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
   
-  // Function to set the value of an input element by ID
-function setInputValueById(id, value) {
-    document.getElementById(id).value = value;
-  }
-  
-  // Function to initialize form
+// Function to add existing data to fields
 function initializeForm() {
     const userName = getParameterByName('user-name');
     const email = getParameterByName('email');
@@ -93,17 +90,22 @@ function initializeForm() {
     setInputValueById('contact', contact);
   }
 
-  const form = document.getElementById('billing-info-form');
-  const nameInput = document.getElementById('user-name');
-  const emailInput = document.getElementById('email');
-  const contactInput = document.getElementById('contact');
-  const addressInput = document.getElementById('address');
-  const postcodeInput = document.getElementById('postcode');
-  const cardNameInput = document.getElementById('cname');
-  const cardNumberInput = document.getElementById('ccnum');
-  const cvvInput = document.getElementById('cvv');
+// Function to set the value of an input element by ID
+function setInputValueById(id, value) {
+  document.getElementById(id).value = value;
+}
+
+const form = document.getElementById('billing-info-form');
+const nameInput = document.getElementById('user-name');
+const emailInput = document.getElementById('email');
+const contactInput = document.getElementById('contact');
+const addressInput = document.getElementById('address');
+const postcodeInput = document.getElementById('postcode');
+const cardNameInput = document.getElementById('cname');
+const cardNumberInput = document.getElementById('ccnum');
+const cvvInput = document.getElementById('cvv');
   
-  form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
     let isValid = true;
     const name = nameInput.value;
     const email = emailInput.value;
@@ -205,79 +207,79 @@ function initializeForm() {
     }
 });
     
-  // Show error message when input is blurred
-  //reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
-  nameInput.addEventListener('blur', () => {
-    const name = nameInput.value;
-    if (!name || /^\d+$/.test(name)) {
-      nameInput.nextElementSibling.textContent = 'Please enter your name';
-    } else {
-      nameInput.nextElementSibling.textContent = '';
-    }
-  });
+// Show error message when input is blurred
+//reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+nameInput.addEventListener('blur', () => {
+  const name = nameInput.value;
+  if (!name || /^\d+$/.test(name)) {
+    nameInput.nextElementSibling.textContent = 'Please enter your name';
+  } else {
+    nameInput.nextElementSibling.textContent = '';
+  }
+});
 
-  emailInput.addEventListener('blur', () => {
-    const email = emailInput.value;
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
-    } else {
-      emailInput.nextElementSibling.textContent = '';
-    }
-  });
-  
-  contactInput.addEventListener('blur', () => {
-    const contact = contactInput.value;
-    if (contact.length !== 10) {
-      contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
-    } else {
-      contactInput.nextElementSibling.textContent = '';
-    }
-  });
-  
-  addressInput.addEventListener('blur', () => {
-    const address = addressInput.value;
-    if (!address) {
-      addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
-    } else {
-      addressInput.nextElementSibling.textContent = '';
-    }
-  });
+emailInput.addEventListener('blur', () => {
+  const email = emailInput.value;
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
+  } else {
+    emailInput.nextElementSibling.textContent = '';
+  }
+});
 
-  postcodeInput.addEventListener('blur', () => {
-    const postcode = postcodeInput.value;
-    if (!postcode || !/^\d{5}$/.test(postcode)) {
-      postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
-    } else {
-      postcodeInput.nextElementSibling.textContent = '';
-    }
-  });
+contactInput.addEventListener('blur', () => {
+  const contact = contactInput.value;
+  if (contact.length !== 10) {
+    contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
+  } else {
+    contactInput.nextElementSibling.textContent = '';
+  }
+});
 
-  cardNameInput.addEventListener('blur', () => {
-    const cardName = cardNameInput.value;
-    if (!cardName || /^\d+$/.test(cardName)) {
-      cardNameInput.nextElementSibling.textContent = 'Please enter the cardholder\'s name';
-    } else {
-      cardNameInput.nextElementSibling.textContent = '';
-    }
-  });
+addressInput.addEventListener('blur', () => {
+  const address = addressInput.value;
+  if (!address) {
+    addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
+  } else {
+    addressInput.nextElementSibling.textContent = '';
+  }
+});
 
-  cardNumberInput.addEventListener('blur', () => {
-    const cardNumber = cardNumberInput.value;
-    if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
-      cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
-    } else {
-      cardNumberInput.nextElementSibling.textContent = '';
-    }
-  });
+postcodeInput.addEventListener('blur', () => {
+  const postcode = postcodeInput.value;
+  if (!postcode || !/^\d{5}$/.test(postcode)) {
+    postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
+  } else {
+    postcodeInput.nextElementSibling.textContent = '';
+  }
+});
 
-  cvvInput.addEventListener('blur', () => {
-    const cvv = cvvInput.value;
-    if (!cvv || !/^\d{3}$/.test(cvv)) {
-      cvvInput.nextElementSibling.textContent = 'Please enter a valid security number';
-    } else {
-      cvvInput.nextElementSibling.textContent = '';
-    }
-  });
+cardNameInput.addEventListener('blur', () => {
+  const cardName = cardNameInput.value;
+  if (!cardName || /^\d+$/.test(cardName)) {
+    cardNameInput.nextElementSibling.textContent = 'Please enter the cardholder\'s name';
+  } else {
+    cardNameInput.nextElementSibling.textContent = '';
+  }
+});
+
+cardNumberInput.addEventListener('blur', () => {
+  const cardNumber = cardNumberInput.value;
+  if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
+    cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
+  } else {
+    cardNumberInput.nextElementSibling.textContent = '';
+  }
+});
+
+cvvInput.addEventListener('blur', () => {
+  const cvv = cvvInput.value;
+  if (!cvv || !/^\d{3}$/.test(cvv)) {
+    cvvInput.nextElementSibling.textContent = 'Please enter a valid security number';
+  } else {
+    cvvInput.nextElementSibling.textContent = '';
+  }
+});
   
 //back to top button functionality
 let backToTopButton = document.getElementById("back-to-top");

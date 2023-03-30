@@ -3,7 +3,7 @@
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-  }
+}
 
 body {
   margin: 0;
@@ -11,17 +11,49 @@ body {
 
 .content-container {
     margin: 80px
-  }
+}
 
 .ref {
   font-weight: 600;
   padding-right: 40px;
 }
 
+/***********************ORDER SUMMARY DETAILS*********************/
 pre {
   margin: 0px;
 }
 
+#PDFcontent h3 {
+  text-transform: uppercase;
+}
+
+/***********************CART ITEMS IN A TABLE********************/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+th {
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/***********************DOWNLOAD BUTTON FOR INVOICE********************/
 #download {
   border: none;
   background: none;
@@ -36,11 +68,11 @@ pre {
   color: #04a96d;
 }
 
-
+/***********************BILLING INFO(BILLING & PAYMENT)********************/
 .details-container {
     display: flex;
     column-gap: 40px;
-  }
+}
   
 .column {
     flex: 50%;
@@ -53,12 +85,12 @@ h3.column {
   text-align: left;
 }
 
-/* Form styles */
+/***********************FORM STYLES********************/
 label {
     font-size: 1rem;
     margin-top: 10px;
     align-self: flex-start;
-  }
+}
 
 .icon-container {
   align-self: flex-end;
@@ -76,7 +108,7 @@ span.error {
   margin-bottom: 10px;
 }
 
-input{
+input {
     width: 80%;
     align-self: flex-start;
     font-size: 1rem;
@@ -87,24 +119,37 @@ input{
     background-color: transparent;
     transition: all .3s ease; 
     outline: none;
+    font-size: 14px;
+    color: #333;
 }
   
-input:focus{
+input:focus {
       border-color: #010378;
-    }
+}
 
+.dropdown-container {
+  display: flex;
+  align-self: flex-start;
+  gap: 70px;
+}
+    
+.dp-container2 {
+  display: flex;
+  flex-direction: column;
+}
+    
 select {
   border: none;
   align-self: flex-start;
   padding: .4rem 0;
   font-size: 1rem;
 }
-  
+
+/***********************SUBMIT AND RESET BUTTON********************/
 .submit-reset {
     font-size: 20px;
     float: right;
     margin-right: 40px;
-    
 }
 
 #resetbutton {
@@ -135,41 +180,7 @@ select {
   color: white;
 }
 
-.dropdown-container {
-  display: flex;
-  align-self: flex-start;
-  gap: 70px;
-}
-
-.dp-container2 {
-  display: flex;
-  flex-direction: column;
-}
-
-/* cart items here as a table*/
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-th, td {
-    text-align: left;
-    padding: 8px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-  }
-  
-th {
-    background-color: #333;
-    color: white;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 0.1em;
-  }
-  
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+/***********************BACK TO TOP BUTTON********************/
 
 #back-to-top {
     position: fixed; 
@@ -184,27 +195,34 @@ tr:nth-child(even) {
     border-radius: 50px;
     width: 40px;
     text-shadow: 0 0.5px 1px #2a2828;
-  }
+}
   
 #back-to-top:hover {
     background-color: transparent; 
     color: #F71735;
     text-shadow: 0 0.5px 1px #2a2828;
-  }
+}
 
+/********************************FOOTER*******************************/
 .footer {
-    display: flex;
-    bottom:0; 
-    width:100%; 
-    height: 70px;
-    background-color: #2C74B3;
-    font-weight: 500;
-    color: #070707;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  bottom:0; 
+  width:100%; 
+  height: 70px;
+  background-color: #144c7e;
+  font-weight: 300;
+  color: #fcfcfc;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .footer a {
-      color: rgb(0, 22, 24);
-      font-style: italic;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 500;
 }
