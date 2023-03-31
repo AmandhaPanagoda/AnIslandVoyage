@@ -44,14 +44,14 @@ function PDFquote() {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
 
-  let tot = "Total = $"+totalPriceAllItems.toString();
-  let ref = "Reference number: #"+referenceNum.toString();
   let name = "Name: "+ getParameterByName('user-name');
+  let ref = "Reference number: #"+referenceNum.toString();
+  let tot = "Total = $"+totalPriceAllItems.toString();
 
   doc.setTextColor(28,58,179); //set color of the next texts
-  doc.text(tot, 10, 20);
-  doc.text(ref, 10, 30);
   doc.text(name, 10, 40);
+  doc.text(ref, 10, 30);
+  doc.text(tot, 10, 20);
   doc.text("Your Item List", 10, 60);
 
   doc.setTextColor(0,0,0); //reset the color
@@ -125,7 +125,6 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       nameInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
   
     // Validate email
@@ -134,16 +133,15 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       emailInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
   
     // Validate contact
     if (contact.length !== 10) {
       contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
       isValid = false;
+      console.log("invalid contact");
     } else {
       contactInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
   
     // Validate address
@@ -152,7 +150,6 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       addressInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
 
     // Validate Postcode
@@ -161,7 +158,6 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       postcodeInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
 
     // Validate card name
@@ -170,7 +166,6 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       cardNameInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
 
     // Validate card number
@@ -179,7 +174,6 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       cardNumberInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
 
     // Validate CVV
@@ -188,11 +182,10 @@ form.addEventListener('submit', (event) => {
       isValid = false;
     } else {
       cvvInput.nextElementSibling.textContent = '';
-      isValid = true;
     }
 
     if (!isValid) {
-      console.log(10);
+      console.log("not valid");
       event.preventDefault();
     } else {
       console.log("valid inputs");
