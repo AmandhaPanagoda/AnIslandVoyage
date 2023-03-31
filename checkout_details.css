@@ -198,9 +198,7 @@ select {
 }
   
 #back-to-top:hover {
-    background-color: transparent; 
-    color: #F71735;
-    text-shadow: 0 0.5px 1px #2a2828;
+  opacity: 0.5;
 }
 
 /********************************FOOTER*******************************/
