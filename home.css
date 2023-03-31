@@ -1,5 +1,5 @@
 body {
-    background-image: url("images_home/main\ page\ image.jpg");
+    background-image: url("./images_home/main\ page\ image.jpg");
     background-repeat: no-repeat;
     background-position: right-top;
     background-attachment: fixed;
@@ -9,7 +9,6 @@ body {
     margin: 0;
 
 }
-
 
 
 .contents{
@@ -26,7 +25,7 @@ body {
     font-size: 22px;
 }
 
-img{
+.contents img{
     width: 400px;
     height:400px;
     border-radius: 25px 25px 0px 0px;
