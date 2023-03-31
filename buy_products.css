@@ -209,10 +209,7 @@ span.error {
 }
 
 .checkout:hover {
-  background-color: #04a96d;
-  font-weight: 600;
-  font-size: 1rem;
-  color: white;
+  box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
 }
   
 .checkout.disabled {
@@ -233,10 +230,7 @@ span.error {
 }
 
 .clear-cart:hover {
-  background-color: #e72424;
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
+  box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
 }
 
 /***********************Slideshow styles*************************/
