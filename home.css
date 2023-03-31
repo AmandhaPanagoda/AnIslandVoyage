@@ -1,5 +1,5 @@
 body {
-    background-image: url("main page image.jpg");
+    background-image: url("images_home/main\ page\ image.jpg");
     background-repeat: no-repeat;
     background-position: right-top;
     background-attachment: fixed;
@@ -10,20 +10,25 @@ body {
 }
 
 
+
 .contents{
-    background-color: #ffffff;
-    width: 400px;
-    height:450px;
     box-shadow: 0 4px 8px 0 #ffffff;
     border-radius:10px;
     transition: 0.3s;
-    padding-left:35px;
+    padding-left:45px;
     padding-top: 25px;
+    padding-right:45px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-   
+    font-size: 22px;
+}
 
+img{
+    width: 400px;
+    height:400px;
+    border-radius: 25px 25px 0px 0px;
 }
       
  /* On mouse-over, add a deeper shadow */
@@ -31,32 +36,30 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
       
-.culture{
-    background-color: #ffffff;
-    width: 350px;
-    height:350px;
-}
 .wildlife{
     background-color: #ffffff;
-    width: 350px;
-    height:350px;
+    width: 400px;
+    height:500px;
+    border-radius: 25px;
+    text-align: center;
+
 }
 .beaches{
     background-color: #ffffff;
-    width: 350px;
-    height:350px
+    width: 400px;
+    height:500px;
+    border-radius: 25px;
+    text-align: center;
  
 }
 .festivals{
     background-color: #ffffff;
-    width: 350px;
-    height:350px;
+    width: 400px;
+    height:500px;
+    border-radius: 25px;
+    text-align: center;
 }
-.monuments{
-    background-color: #ffffff;
-    width: 350px;
-    height:350px;
-}
+
 
 .image:hover{
     background-color: #b6b6bb;
@@ -66,10 +69,10 @@ body {
 }
 
 .mainIntro{
-    
-    padding-top: 100px;
+    padding-top:50px;
     padding-left: 150px;
     padding-right: 150px;
+    font-size: 18px;
     /*background-color: #d1d1d878;*/
 
 }
@@ -80,17 +83,15 @@ body {
 }
 .topic{
     display:flex;
-    padding-top: 600;
-    padding-left: 200;
-
-}
-
-.topic{
+    padding-top:200x;
+    padding-left:200px;
     margin-top: 100px;
     margin-left:150px;
+    text-align: center;
 }
 
-.content{
-    list-style-type:none ;
+.slogan{
+    font-size: 22px;
+    text-align: center;
 }
 
