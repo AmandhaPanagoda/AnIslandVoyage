@@ -14,10 +14,10 @@
 
     <!--Font awesome kit + Pro CDN-->
     <script src="https://kit.fontawesome.com/5fe6ad5162.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css">
 
     <!--Favicon-->
-    <link rel="icon" href="./logos/icon.png?" type="image/x-icon">
+    <link rel="icon" href="./logos/icon.png" type="image/x-icon">
 
     <!--jsPDF CDN-->
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -90,7 +90,8 @@
               <div class="dropdown-container">
                 <div class="dp-container2">
                   <label for="district"><i class="fa fa-institution"></i> District<span class="required">*</span></label>
-                  <select name="district" id="district" required>
+                  <select name="district" id="district">
+                    <option value="" label="none" disabled selected hidden></option>
                     <option value="Ampara">Ampara</option>
                     <option value="Anuradhapura">Anuradhapura</option>
                     <option value="Badulla">Badulla</option>
@@ -121,8 +122,9 @@
                 </div>
 
                 <div class="dp-container2">
-                  <label for="state"><i class="fa fa-map-signs"></i> Province<span class="required">*</span></label>
-                  <select name="province" id="province" required>
+                  <label for="province"><i class="fa fa-map-signs"></i> Province<span class="required">*</span></label>
+                  <select name="province" id="province">
+                    <option value="" label="none" disabled selected hidden></option>
                     <option value="Central Province">Central Province</option>
                     <option value="Eastern Province">Eastern Province</option>
                     <option value="Northern Province">Northern Province</option>
@@ -133,6 +135,7 @@
                     <option value="Uva Province">Uva Province</option>
                     <option value="Western Province">Western Province</option>
                   </select>
+                  <span class="error"></span>
                 </div>
               </div>
 
@@ -163,7 +166,8 @@
           <div class="dropdown-container">
             <div class="dp-container2">
               <label for="expmonth">Exp Month<span class="required">*</span></label>
-              <select name="expmonth" id="expmonth" required>
+              <select name="expmonth" id="expmonth">
+                <option value="" label="none" disabled selected hidden></option>
                 <option value="January">January</option>
                 <option value="February">February</option>
                 <option value="March">March</option>
@@ -177,11 +181,13 @@
                 <option value="November">November</option>
                 <option value="December">December</option>
               </select>
+              <span class="error"></span>
             </div>
             
             <div class="dp-container2">
               <label for="expyear">Exp Year<span class="required">*</span></label>
-              <select name="expyear" id="expyear" required>
+              <select name="expyear" id="expyear">
+                <option value="" label="none" disabled selected hidden></option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
@@ -194,6 +200,7 @@
                 <option value="2032">2032</option>
                 <option value="2033">2033</option>
               </select>
+              <span class="error"></span>
             </div>
           </div>
         </div>

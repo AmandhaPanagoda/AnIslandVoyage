@@ -224,3 +224,4 @@ select {
     font-style: italic;
     font-weight: 500;
 }
+select:invalid { color: gray; }

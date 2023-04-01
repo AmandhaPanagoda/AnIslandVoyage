@@ -104,6 +104,10 @@ const postcodeInput = document.getElementById('postcode');
 const cardNameInput = document.getElementById('cname');
 const cardNumberInput = document.getElementById('ccnum');
 const cvvInput = document.getElementById('cvv');
+const expyearInput = document.getElementById('expyear');
+const expmonthInput = document.getElementById('expmonth');
+const districtInput = document.getElementById('district');
+const provinceInput = document.getElementById('province');
   
 form.addEventListener('submit', (event) => {
     let isValid = true;
@@ -115,9 +119,44 @@ form.addEventListener('submit', (event) => {
     const cardName = cardNameInput.value;
     const cardNumber = cardNumberInput.value;
     const cvv = cvvInput.value;
-  
+    const expyear = expyearInput.options[expyearInput.selectedIndex].value;
+    const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
+    const district = districtInput.options[districtInput.selectedIndex].value;
+    const province = provinceInput.options[provinceInput.selectedIndex].value;
 
     event.preventDefault();
+
+    // Validate expyear
+    if (expyear == "") {
+      expyearInput.nextElementSibling.textContent = 'Select expiry year';
+      isValid = false;
+    } else {
+      expyearInput.nextElementSibling.textContent = '';
+    }
+
+    // Validate expmonth
+    if (expmonth == "") {
+      expmonthInput.nextElementSibling.textContent = 'Select expiry month';
+      isValid = false;
+    } else {
+      expmonthInput.nextElementSibling.textContent = '';
+    }
+
+    // Validate district
+    if (district == "") {
+      districtInput.nextElementSibling.textContent = 'Select your district';
+      isValid = false;
+    } else {
+      districtInput.nextElementSibling.textContent = '';
+    }
+
+    // Validate province
+    if (province == "") {
+      provinceInput.nextElementSibling.textContent = 'Select your province';
+      isValid = false;
+    } else {
+      provinceInput.nextElementSibling.textContent = '';
+    }
 
     // Validate name
     if (!name || /^\d+$/.test(name)) {
@@ -202,6 +241,42 @@ form.addEventListener('submit', (event) => {
     
 // Show error message when input is blurred
 //reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+expyearInput.addEventListener('blur', () => {
+  const expyear = expyearInput.options[expyearInput.selectedIndex].value;
+  if (expyear == "") {
+    expyearInput.nextElementSibling.textContent = 'Select expiry year';
+  } else {
+    expyearInput.nextElementSibling.textContent = '';
+  }
+});
+
+expmonthInput.addEventListener('blur', () => {
+  const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
+  if (expmonth == "") {
+    expmonthInput.nextElementSibling.textContent = 'Select expiry month';
+  } else {
+    expmonthInput.nextElementSibling.textContent = '';
+  }
+});
+
+districtInput.addEventListener('blur', () => {
+  const district = districtInput.options[districtInput.selectedIndex].value;
+  if (district == "") {
+    districtInput.nextElementSibling.textContent = 'Select your district';
+  } else {
+    districtInput.nextElementSibling.textContent = '';
+  }
+});
+
+provinceInput.addEventListener('blur', () => {
+  const province = provinceInput.options[provinceInput.selectedIndex].value;
+  if (province == "") {
+    provinceInput.nextElementSibling.textContent = 'Select your province';
+  } else {
+    provinceInput.nextElementSibling.textContent = '';
+  }
+});
+
 nameInput.addEventListener('blur', () => {
   const name = nameInput.value;
   if (!name || /^\d+$/.test(name)) {
