@@ -93,6 +93,11 @@ section {
   padding: 0px 50px;
 }
 
+section h2 {
+  font-size: 60px;
+  color: #195284;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
