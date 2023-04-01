@@ -145,6 +145,10 @@ select {
   font-size: 1rem;
 }
 
+label[for="district"] option[disabled] {
+  color: gray;
+}
+
 /***********************SUBMIT AND RESET BUTTON********************/
 .submit-reset {
     font-size: 20px;
@@ -224,4 +228,3 @@ select {
     font-style: italic;
     font-weight: 500;
 }
-select:invalid { color: gray; }
