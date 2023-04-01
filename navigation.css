@@ -1,6 +1,6 @@
 .navigation-bar {
-  background-color: #131313b6;
-  box-shadow: 0 3px 8px #00000080;
+  background-color: #131313;
+  box-shadow: 0 3px 8px #000000ec;
   display: flex;
   height: 60px;
   align-items: center; 
@@ -41,7 +41,7 @@
   text-transform: uppercase;
   position: relative;
   z-index: 2;
-  text-shadow: 1px 0px rgba(107, 106, 124, 0.4);
+  text-shadow: 1px 0px rgba(251, 251, 255, 0.4);
   color: #ffffff;
   letter-spacing: .2em;
   text-decoration: none;
@@ -50,7 +50,7 @@
 }
 
 #pages a:hover {
-  color: #d1d1d878;
+  color: #e2e2ede9;
   font-weight: 600;
 }
 
