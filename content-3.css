@@ -33,37 +33,36 @@ h1 {
   opacity: 0.5;
 }
 
+/********************************ANCHORS*******************************/
 .anchors {
   display: flex;
   flex-direction: column;
-  width: 120px;
+  width: 150px;
   position: fixed;
-  bottom: 150px; 
+  bottom: 120px; 
   right: 0px; 
   z-index: 99; 
   border: none; 
   outline: none; 
-
+  text-align: center;
+  font-size: 12px;
 }
 
-.anchors button {
+.anchors a {
   margin-top: 2px;
   border-radius: 50px;
   padding: 6px;
   text-transform: lowercase;
   border: none;
-  background-color: #F18701;
-}
-
-.anchors button:hover {
-  border: 0.5px solid #B88B4A;
-  background-color: #B88B4A;
-}
-
-.anchors a{
+  background-color: #0765c3;
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+}
+
+.anchors a:hover {
+  border: 0.5px solid #054b90;
+  background-color: #054b90;
 }
 
 .footer {

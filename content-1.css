@@ -63,34 +63,32 @@ h1 {
 .anchors {
   display: flex;
   flex-direction: column;
-  width: 120px;
+  width: 150px;
   position: fixed;
-  bottom: 150px; 
+  bottom: 120px; 
   right: 0px; 
   z-index: 99; 
   border: none; 
   outline: none; 
-
+  text-align: center;
+  font-size: 12px;
 }
 
-.anchors button {
+.anchors a {
   margin-top: 2px;
   border-radius: 50px;
   padding: 6px;
   text-transform: lowercase;
   border: none;
   background-color: #0765c3;
-}
-
-.anchors button:hover {
-  border: 0.5px solid #054b90;
-  background-color: #054b90;
-}
-
-.anchors a{
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+}
+
+.anchors a:hover {
+  border: 0.5px solid #054b90;
+  background-color: #054b90;
 }
 
 /********************************FOOTER*******************************/
@@ -122,7 +120,7 @@ section {
   padding: 0px 50px;
 }
 
-section h1 {
+section h2 {
   font-size: 60px;
   color: #195284;
 }
@@ -268,137 +266,77 @@ section h1 {
   grid-row: 1/6;
 }
 
-/***************************************************** ADVENTURE IN SRI LANKA IMAGES ******************************************************/
+/***************************************************** BEACHES IN SRI LANKA IMAGES ******************************************************/
 
-#adventure .grid-item1 {
-  background-image: url("https://ecotripadvise.com/wp-content/uploads/2022/01/6-Best-Water-Sport-Activities-in-Sri-Lanka-header-1024x453.jpg");
+#beaches .grid-item1 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
   background-size: cover;
   background-position: center;
   grid-column: 1/4;
   grid-row: 1/2;
 }
 
-#adventure .grid-item2 {
-  background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/b6/97.jpg");
+#beaches .grid-item2 {
+  background-image: url("https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/11/Intrepid-Travel-sri-lanka_unawatuna_beach-e1511415769473.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/2;
   grid-row: 2/5;
 }
 
-#adventure .grid-item3 {
-  background-image: url("https://df4gcsff7xjx7.cloudfront.net/2018/08/home-header-1-2.jpg");
+#beaches .grid-item3 {
+  background-image: url("https://et-website.s3.amazonaws.com/uploads/2015/05/sri-lanka-galle-beaches-3.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/5;
   grid-row: 5/5;
 }
 
-#adventure .grid-item4 {
-  background-image: url("https://www.experiencetravelgroup.com/reposit/20200124112300.jpg");
+#beaches .grid-item4 {
+  background-image: url("https://www.thecoastalcampaign.com/wp-content/uploads/2019/10/DJI_0207-2.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 2/4;
   grid-row: 2/5;
 }
 
-#adventure .grid-item5 {
-  background-image: url("https://www.lemaastota.com/wp-content/uploads/2021/11/the-secret-ella-zipline-gallery-01.jpg");
+#beaches .grid-item5 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/user-images/1547131970237/shutterstock-100609324_main_1547132002949.jpeg");
   background-size: cover;
   background-position: center;
   grid-column: 4/6;
   grid-row: 1/3;
 }
 
-#adventure .grid-item6 {
-  background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2021/07/A-foreign-boy-windsurfing-on-the-waves-enjoying-one-of-the-most-exciting-water-sports-in-Sri-Lanka.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 4/5;
-  grid-row: 3/5;
-}
-
-#adventure .grid-item7 {
+#beaches .grid-item6 {
   background-image: url("https://www.thesrilankatravelblog.com/wp-content/uploads/2022/02/sri-lanka-a-surfers-guide-new-header.jpg");
   background-size: cover;
   background-position: center;
-  grid-column: 5/6;
-  grid-row: 3/6;
-}
-
-#adventure .grid-item8 {
-  background-image: url("https://www.sazylankatours.com/wp-content/uploads/2022/08/Diving-and-Snorkeling-Sri-Lanka.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 6/8;
-  grid-row: 1/6;
-}
-
-/***************************************************** SAFARI IN SRI LANKA IMAGES ******************************************************/
-
-#safaris .grid-item1 {
-  background-image: url("https://nomadicboys.com/wp-content/uploads/2019/04/sri-lanka-safari.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1/4;
-  grid-row: 1/2;
-}
-
-#safaris .grid-item2 {
-  background-image: url("https://www.srilankadrivercarrent.com/wp-content/uploads/2021/02/Wildlife-Safari-Sri-Lanka.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1/2;
-  grid-row: 2/5;
-}
-
-#safaris .grid-item3 {
-  background-image: url("https://www.webjet.co.nz/travel/wp-content/uploads/2019/01/Sri-Lanka-Safari-1.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1/5;
-  grid-row: 5/5;
-}
-
-#safaris .grid-item4 {
-  background-image: url("https://i.insider.com/5bae37ef9c5d678d218b456a?width=750&format=jpeg&auto=webp");
-  background-size: cover;
-  background-position: center;
-  grid-column: 2/4;
-  grid-row: 2/5;
-}
-
-#safaris .grid-item5 {
-  background-image: url("https://monkeysandmountains.com/wp-content/uploads/2018/11/sri-lanka-6-l.jpg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 4/6;
-  grid-row: 1/3;
-}
-
-#safaris .grid-item6 {
-  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1920,h_1080,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ofpjn9i8ikjl1ey6l2dh/UdawalaweNationalParkSafariExperiencefromMirissa,SriLanka-Klook.jpg");
-  background-size: cover;
-  background-position: center;
   grid-column: 4/5;
   grid-row: 3/5;
 }
 
-#safaris .grid-item7 {
-  background-image: url("https://www.divergenttravelers.com/wp-content/uploads/Best-Sri-Lanka-Safari-Comparison-guide.jpg");
+#beaches .grid-item7 {
+  background-image: url("https://cinnamonweb.blob.core.windows.net/cinnamonweb-prd/dining_wellness/snorkelling-at-pigeon-island-Hikka-tranz-530X420.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 5/6;
   grid-row: 3/6;
 }
 
-#safaris .grid-item8 {
-  background-image: url("https://www.srilankatravelandtourism.com/places-sri-lanka/minneriya/minneriya-images/minneriya-6-sri-lanka.jpg");
+#beaches .grid-item8 {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/596b2969d2b85786e6892853/1533121452336-4TZ6S7UV5I7GEWJYLZHT/The+rope+swing+at+Dalawella+Beach%2C+Sri+Lanka");
   background-size: cover;
   background-position: center;
   grid-column: 6/8;
   grid-row: 1/6;
 }
+
+/***************************************************** WILDLIFE IN SRI LANKA IMAGES ******************************************************/
+
+
+
+
 
 /**************************************************** PAGE STYLES ************************************************************************/
 .page-number-block {
