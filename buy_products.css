@@ -21,7 +21,7 @@ body {
   
 .right {
     width: 25%;
-    position: -webkit-sticky;
+    position: -webkit-sticky; /*Chrome and safari*/
     position: sticky;
   }
 
@@ -108,7 +108,7 @@ body {
     text-align: center;
     margin-right: 5px;
 }
-  
+
 .product button.add-to-cart {
     background-color: #c2bf26;
     letter-spacing: 1px;
@@ -320,6 +320,7 @@ span.error {
   justify-content: center;
   flex-direction: column;
 }
+
 .footer p {
   margin-top: 0px;
   margin-bottom: 0px;

@@ -49,9 +49,9 @@ function PDFquote() {
   let tot = "Total = $"+totalPriceAllItems.toString();
 
   doc.setTextColor(28,58,179); //set color of the next texts
-  doc.text(name, 10, 40);
+  doc.text(name, 10, 20);
   doc.text(ref, 10, 30);
-  doc.text(tot, 10, 20);
+  doc.text(tot, 10, 40);
   doc.text("Your Item List", 10, 60);
 
   doc.setTextColor(0,0,0); //reset the color
