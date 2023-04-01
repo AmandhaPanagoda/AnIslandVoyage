@@ -14,6 +14,7 @@ h1 {
   font-size: 60px;
 }
 
+/*************************************************PAGE HEADING**********************************************/
 .page-title {
   font-family: "Cairo";
   text-align: center;
@@ -332,10 +333,62 @@ section h2 {
 }
 
 /***************************************************** WILDLIFE IN SRI LANKA IMAGES ******************************************************/
+#wildlife .grid-item1 {
+  background-image: url("https://www.wildlifetourssrilanka.com/cache/mb2content/255_113_Turtle01_480_480.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+#wildlife .grid-item2 {
+  background-image: url("https://www.mahoora.lk/images/Wildlife-of-Sri-Lanka-01.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+
+#wildlife .grid-item3 {
+  background-image: url("https://www.mahoora.lk/images/Wildlife-of-Sri-Lanka-04.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/3;
+  grid-row: 3/6;
+}
 
 
+#wildlife .grid-item5 {
+  background-image: url("https://www.mahoora.lk/images/Wildlife-of-Sri-Lanka-03.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/5;
+  grid-row: 3/6;
+}
 
+#wildlife .grid-item6 {
+  background-image: url("https://www.srilankatravelandtourism.com/beautiful/wildlife/wildlife-srilanka-images/wildlife-1-yala.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 1/3;
+}
 
+#wildlife .grid-item7 {
+  background-image: url("https://www.wheretowatchbirdsandotherwildlifeintheworld.co.uk/images/slbluepie.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#wildlife .grid-item8 {
+  background-image: url("https://www.holidify.com/images/cmsuploads/compressed/Yala_National_Park_20190710120604.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
 
 /**************************************************** PAGE STYLES ************************************************************************/
 .page-number-block {
