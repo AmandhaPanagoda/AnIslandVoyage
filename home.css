@@ -55,10 +55,9 @@ h1 {
 .attractions, .adventure, .life{
     background-color: #ffffff;
     width: 400px;
-    height:500px;
+    height:550px;
     border-radius: 25px;
     text-align: center;
-
 }
 
 .footer {
