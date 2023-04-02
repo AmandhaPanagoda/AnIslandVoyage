@@ -55,8 +55,13 @@
     resize: none;
     height: 80px;
   }
+
+  .wrapper option{
+    text-align:left;
+    padding: 10px;
+  }
   
-  .wrapper .btn input[type="submit"]{
+  .wrapper .btn button[type="submit"]{
     border: 0px;
     margin-top: 15px;
     padding: 10px;
@@ -67,9 +72,128 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius:30px;
     cursor: pointer;
   }
+
+  .drop_down{
+    margin-top: 10px;
+
+  }
+  .star-widget {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    flex-direction: row;
+    margin:10px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .star-widget label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .star-widget:last-child {
+    position: static;
+  }
+  
+  .star-widget label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .star-widget label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .star-widget label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .star-widget label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .star-widget label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .star-widget label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .star-widget label:last-child .icon {
+    color: #000;
+  }
+  
+  .star-widget:not(:hover) label input:checked ~ .icon,
+  .star-widget:hover label:hover input ~ .icon {
+    color: rgb(255, 204, 0);
+  }
+  
+  .star-widget  label input:focus:not(:checked) ~ .icon:last-child {
+    color:#444;
+    text-shadow: 0 0 5px rgb(255, 204, 0);
+  }
+
+
+  .popup{
+    width:400px;
+    background:#fff;
+    border-radius: 10px;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding:30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  .open-popup{
+    visibility: visible;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 10px 10px;
+
+  }
+
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #6fd649;
+  }
+
+
   
   #error_message{
     margin-bottom: 20px;
