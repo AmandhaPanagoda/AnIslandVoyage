@@ -32,12 +32,12 @@
               <li><a href="student-details.html" data-title="Student Details">Student Details</a></li>
           </ul>
       </nav>
-      
+    
     <div class="form">
         <div class="wrapper">
             <h2>Feedback Form</h2>
             <div id="error_message"></div>
-            <form id="myform" onsubmit="return validate();" form action="mailto:bhagya.20221453@iit.ac.lk" method="post" enctype="text/plain">
+            <form id="myform" onsubmit="return validate();" action="mailto:bhagya.20221453@iit.ac.lk" method="post" enctype="text/plain">
             <div class="input_field">
                 <p>Enter your first name </p>
                 <input type="text" id="fname" placeholder="First Name" required> 
@@ -88,7 +88,7 @@
                       <span class="icon">★</span>
                     </label>
                 </div>
-                
+
             <p>How did you get to know about 'Island Voyage'?</p>
             <div class="drop_down">
                 
@@ -106,7 +106,7 @@
             <p>How satisfied were you with the responsiveness and helpfulness of our customer service?</p>
                 <div class="info">
                     <br>
-                    <input type="radio" name="query" value="Definitely" id="query1">
+                    <input type="radio" name="query" value="Definitely" id="query1" required>
                     <label for="query1">Definitely</label><br>
                     <input type="radio" name="query" value="Not Sure" id="query2">
                     <label for="query2">Not Sure</label><br>
@@ -119,7 +119,7 @@
             <p>What are the things you liked about Sri Lanka, and what can we improve on?
             </p>
             <div class="input_field">
-                <textarea placeholder="" id="yourfeedback"></textarea>
+                <textarea placeholder="" id="yourfeedback" required></textarea>
             </div>
 
             <p>Were there any challenges you faced during your Sri Lanka travel, such as transportation, language barriers, or cultural differences?
@@ -131,7 +131,7 @@
             <p>Would you recommend our Sri Lanka tourism services to your friends and family?</p>
                 <div class="info">
                     <br>
-                    <input type="radio" name="query" value="Definitely" id="query1">
+                    <input type="radio" name="query" value="Definitely" id="query1"required>
                     <label for="query1">Definitely</label><br>
                     <input type="radio" name="query" value="Not Sure" id="query2">
                     <label for="query2">Not Sure</label><br>
@@ -144,7 +144,7 @@
             
 
             <div class="btn">
-                <button type="submit" onclick="openPopup()"> Submit </button>
+                <button type="submit" onclick="openPopup()" value="Send"> Submit </button>
             </div>
 
             <div class="popup" id="popup">
