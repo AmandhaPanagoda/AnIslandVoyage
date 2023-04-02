@@ -10,50 +10,43 @@ function validate()
   error_message.style.padding = "10px";
   
   var text;
-  if(fname.length < 3)
+  if(firstname.length < 3)
   {
-    text = "Please Enter a valid First Name";
+    text = "Please enter your first name";
     error_message.innerHTML = text;
+    window.scrollTo(0, 0);
     return false;
   }
-  if(lname.length < 3)
+  if(lastname.length < 3)
   {
-    text = "Please Enter a Valid Last Name";
+    text = "Please enter your last name";
     error_message.innerHTML = text;
+    window.scrollTo(0, 0);
     return false;
   }
   if(isNaN(phone) || phone.length != 10)
   {
-    text = "Please Enter valid Phone Number";
+    text = "Please enter a valid phone number";
     error_message.innerHTML = text;
+    window.scrollTo(0, 0);
     return false;
   }
   if(email.indexOf("@") == -1 || email.length < 6)
   {
-    text = "Please Enter valid Email";
+    text = "Please enter a valid email";
     error_message.innerHTML = text;
+    window.scrollTo(0, 0);
     return false;
   }
-  if(address.length <= 100)
+  if(yourfeedback.length < 5)
   {
-    text = "Please Enter More Than 100 Characters";
+    text = "Please enter your feedback";
     error_message.innerHTML = text;
+    window.scrollTo(0, 0);
     return false;
   }
   alert("Form Submitted Successfully!");
   return true;
-}
-
-
-let popup=document.getElementById("popup");
-
-function openPopup(){
-  popup.classList.add("open-popup");
-}
-
-  
-function closePopup(){
-  popup.classList.remove("open-popup");
 }
 
 $(':radio').change(function() {
