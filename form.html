@@ -32,12 +32,12 @@
               <li><a href="student-details.html" data-title="Student Details">Student Details</a></li>
           </ul>
       </nav>
-    
+      
     <div class="form">
         <div class="wrapper">
             <h2>Feedback Form</h2>
             <div id="error_message"></div>
-            <form id="myform" onsubmit="return validate();" onsubmit= "sendEmail();">
+            <form id="myform" onsubmit="return validate();" form action="mailto:bhagya.20221453@iit.ac.lk" method="post" enctype="text/plain">
             <div class="input_field">
                 <p>Enter your first name </p>
                 <input type="text" id="fname" placeholder="First Name" required> 
