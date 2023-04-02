@@ -4,6 +4,7 @@
 <head>
         
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css">
 
     <!--Navigation bar CSS-->
     <link rel="stylesheet" href="navigation.css">
@@ -14,6 +15,7 @@
 
     <!--Form-->
     <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
 
 </head>
 
@@ -35,43 +37,121 @@
         <div class="wrapper">
             <h2>Feedback Form</h2>
             <div id="error_message"></div>
-            <form id="myform" onsubmit="return validate();">
+            <form id="myform" onsubmit="return validate();" onsubmit= "sendEmail();">
             <div class="input_field">
-                <input type="text" placeholder="First Name" id="fname">
+                <p>Enter your first name </p>
+                <input type="text" id="fname" placeholder="First Name" required> 
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Last Name" id="lname">
+                <p>Enter your last name</p>
+                <input type="text" id="lname" placeholder="Last Name" required>
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Phone" id="phone">
+                <p>Enter your phone number</p>
+                <input type="text" id="phone"placeholder="Phone Number" required>
             </div>
             <div class="input_field">
-                <input type="text" placeholder="Email" id="email">
+                <p>Enter your email address</p>
+                <input type="text" id="email" placeholder="Email address" required>
+            </div>
+        
+                 <p>How user friendly did you find our website and navigation?</p>
+                 <div class="star-widget">
+                    <label>
+                      <input type="radio" name="stars" value="1" />
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="2" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="3" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>   
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="4" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="stars" value="5" />
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                      <span class="icon">★</span>
+                    </label>
+                </div>
+                
+            <p>How did you get to know about 'Island Voyage'?</p>
+            <div class="drop_down">
+                
+                <select id="source" name="sources" required>
+                <option value="select">Please Select</option>
+                <option value="internet">Internet</option>
+                <option value="tv-commercials">TV Commercial</option>
+                <option value="relative-friend">From a relative/ friend</option>
+                <option value="other">Other</option>
+                </select>
             </div>
 
-            <b>Please Enter your query type?</b>
+            <br>
+
+            <p>How satisfied were you with the responsiveness and helpfulness of our customer service?</p>
                 <div class="info">
                     <br>
-                    <input type="radio" name="query" value="Accommodation" id="query1">
-                    <label for="query1">Accommodation</label><br>
-                    <input type="radio" name="query" value="Travel guide" id="query2">
-                    <label for="query2">Travel guide</label><br>
-                    <input type="radio" name="query" value="Travel place" id="query3">
-                    <label for="query3">Travel place</label><br>
-                    <input type="radio" name="query" value="Others" id="query4">
-                    <label for="query4">Others</label><br><br>
+                    <input type="radio" name="query" value="Definitely" id="query1">
+                    <label for="query1">Definitely</label><br>
+                    <input type="radio" name="query" value="Not Sure" id="query2">
+                    <label for="query2">Not Sure</label><br>
+                    <input type="radio" name="query" value="No" id="query3">
+                    <label for="query3">Absolutely Not</label><br>
+                    <br>
                     <div id="error3"></div>
                 </div>
-
-
+                
+            <p>What are the things you liked about Sri Lanka, and what can we improve on?
+            </p>
             <div class="input_field">
-                <textarea placeholder="Your Feedback" id="yourfeedback"></textarea>
+                <textarea placeholder="" id="yourfeedback"></textarea>
             </div>
+
+            <p>Were there any challenges you faced during your Sri Lanka travel, such as transportation, language barriers, or cultural differences?
+            </p>
+            <div class="input_field">
+                <textarea placeholder="" id="yourfeedback"></textarea>
+            </div>
+
+            <p>Would you recommend our Sri Lanka tourism services to your friends and family?</p>
+                <div class="info">
+                    <br>
+                    <input type="radio" name="query" value="Definitely" id="query1">
+                    <label for="query1">Definitely</label><br>
+                    <input type="radio" name="query" value="Not Sure" id="query2">
+                    <label for="query2">Not Sure</label><br>
+                    <input type="radio" name="query" value="No" id="query3">
+                    <label for="query3">Absolutely Not</label><br>
+                    <br>
+                    <div id="error3"></div>
+                </div>
 
             
 
             <div class="btn">
-                <input type="submit">
+                <button type="submit" onclick="openPopup()"> Submit </button>
+            </div>
+
+            <div class="popup" id="popup">
+                <h3>Thank You!</h3>
+    
+                <p>Your details have been successfully submitted. </p>
+                <button type="button" onclick="closePopup()">OK</button>
             </div>
 
             </form>
@@ -85,8 +165,7 @@
         <p>Done By: <a href="bhagya.html">Bhagya Semage</a></p>
     </footer>
 
-    <script src="form.js"></script>
-      
-</body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-</html>
+    </body>
+    </html>

@@ -43,3 +43,33 @@ function validate()
   alert("Form Submitted Successfully!");
   return true;
 }
+
+function sendEmail(){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "bhagya.semage@gmail.com",
+    Password : "Merlin#02",
+    To : 'bhagya.20221453@iit.ac.lk',
+    From : document.getElementById("email").value,
+    Subject : "Island Voyage-Feedback",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+}
+
+let popup=document.getElementById("popup");
+
+function openPopup(){
+  popup.classList.add("open-popup");
+}
+
+  
+function closePopup(){
+  popup.classList.remove("open-popup");
+}
+
+$(':radio').change(function() {
+  console.log('New star rating: ' + this.value);
+});
