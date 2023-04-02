@@ -13,11 +13,17 @@ body {
 h1 {
   font-size: 60px;
 }
-/**********************************************PAGE HEADING**********************************************/
+/***************PAGE HEADING***************/
 .page-title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   letter-spacing: 1px;
+  line-height:2
 }
 
 .page-title h1 {
@@ -27,7 +33,7 @@ h1 {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 75px;
   margin: 10px 0;
 }
 
@@ -51,7 +57,7 @@ h1 {
   opacity: 0.5;
 }
 
-/********************************ANCHORS*******************************/
+/***********ANCHORS**********/
 .anchors {
   display: flex;
   flex-direction: column;
@@ -127,49 +133,49 @@ section h2 {
 
 
 
-/***************************************************** CULTURE IN SRI LANKA IMAGES ******************************************************/
+/****************** ANCITIES CITIES IN SRI LANKA IMAGES *******************/
 
-#culture .grid-item1 {
-  background-image: url("https://viajesbeagle.com/wp-content/uploads/2021/07/ciudades-sri-lanka.jpg");
+#ancient-cities .grid-item1 {
+  background-image: url("https://images.unsplash.com/photo-1637557056625-c133d59dc460?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/4;
   grid-row: 1/2;
 }
 
-#culture .grid-item2 {
-  background-image: url("https://www.worldatlas.com/r/w960-q80/upload/f2/56/3a/shutterstock-470724314.jpg");
+#ancient-cities .grid-item2 {
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/22/26/1c/29/polonnaruwa-ancient-city.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/2;
   grid-row: 2/5;
 }
 
-#culture .grid-item3 {
-  background-image: url("https://srilankatourisminfo.com/wp-content/uploads/2019/01/image-result-for-masks-in-sri-lanka.jpeg");
+#ancient-cities .grid-item3 {
+  background-image: url("https://www.holidify.com/images/bgImages/YAPAHUWA.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/5;
   grid-row: 5/5;
 }
 
-#culture .grid-item4 {
-  background-image: url("https://live.staticflickr.com/5667/21226364795_982f1d35ca_b.jpg");
+#ancient-cities .grid-item4 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/ba/The_Quadrangle%2C_Ancient_City_of_Polonnaruwa%2C_Sri_Lanka_%282%29.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 2/4;
   grid-row: 2/5;
 }
 
-#culture .grid-item5 {
-  background-image: url("https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.ft.lk/assets/uploads/image_c574ca761e.jpg");
+#ancient-cities .grid-item5 {
+  background-image: url("https://live.staticflickr.com/65535/50962674256_6f1c35b811_b.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 4/6;
   grid-row: 1/3;
 }
 
-#culture .grid-item6 {
+#ancient-cities .grid-item6 {
   background-image: url("https://www.helankavacations.com/sri-lanka-tour-package/images/HeritageSriLanka-InnerBanner.jpg");
   background-size: cover;
   background-position: center;
@@ -177,16 +183,16 @@ section h2 {
   grid-row: 3/5;
 }
 
-#culture .grid-item7 {
-  background-image: url("https://w0.peakpx.com/wallpaper/874/471/HD-wallpaper-sri-lanka-mask-creed-mobile-origins-skull-skulls-srilanka-traditional.jpg");
+#ancient-cities .grid-item7 {
+  background-image: url("https://lp-cms-production.imgix.net/2019-06/cd3466ec29738438fe90476411fe7525-anuradhapura-ruins.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 5/6;
   grid-row: 3/6;
 }
 
-#culture .grid-item8 {
-  background-image: url("https://wp.missmalini.com/wp-content/uploads/2014/04/image-1-1.jpg");
+#ancient-cities .grid-item8 {
+  background-image: url("https://i0.wp.com/amazinglanka.com/wp/wp-content/uploads/2013/09/IMG_20171217_150138.jpg?fit=1280%2C730&ssl=1");
   background-size: cover;
   background-position: center;
   grid-column: 6/8;
@@ -194,7 +200,7 @@ section h2 {
 }
 
 
-/***************************************************** CUISINE IN SRI LANKA IMAGES ******************************************************/
+/****************** CUISINE IN SRI LANKA IMAGES *******************/
 
 #cuisine .grid-item1 {
   background-image: url("https://img.traveltriangle.com/blog/wp-content/uploads/2017/08/rsz_shutterstock_437677426.jpg");
@@ -262,7 +268,7 @@ section h2 {
 
 
 
-/***************************************************** FESTIVALS IN SRI LANKA IMAGES ******************************************************/
+/****************** FESTIVALS IN SRI LANKA IMAGES *******************/
 
 #festivals .grid-item1 {
   background-image: url("http://blog.cinnamonhotels.com/wp-content/uploads/2022/04/D3R5942-1.jpg");
@@ -328,7 +334,342 @@ section h2 {
   grid-row: 1/6;
 }
 
-/**************************************************** PAGE STYLES ************************************************************************/
+/****************** DANCE AND MUSIC IN SRI LANKA IMAGES *******************/
+
+#dance .grid-item1 {
+  background-image: url("https://www.classicsrilanka.com/blog/wp-content/uploads/2021/05/DSC_2290-1038x576.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#dance .grid-item2 {
+  background-image: url("https://groundviews.org/wp-content/uploads/2012/05/Header-Image1.png?w=640");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#dance .grid-item3 {
+  background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2021/10/Grandeur-Dances-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+
+#dance .grid-item4 {
+  background-image: url("https://www.srilankafoundation.org/wp-content/themes/dimensiongraphic/PAC-file/traditional-dancing.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#dance .grid-item5 {
+  background-image: url("https://nexttravelsrilanka.com/wp-content/uploads/2020/11/Cultural-Dance.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#dance .grid-item6 {
+  background-image: url("https://www.classicsrilanka.com/blog/wp-content/uploads/2021/05/Sri-Lanka-Traditional-Dances-Sabaragamuwa-dance.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#dance .grid-item7 {
+  background-image: url("http://www.sundaytimes.lk/160710/uploads/13.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#dance .grid-item8 {
+  background-image: url("http://www.classicsrilanka.com/blog/wp-content/uploads/2021/05/8713415994_5b70683412_b.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/****************** TRADITIONAL CRAFTS IN SRI LANKA IMAGES *******************/
+
+#craft .grid-item1 {
+  background-image: url("https://cdn2.wanderlust.co.uk/media/1004/hr-shutterstock_1830174857-1500.jpg?anchor=center&mode=crop&width=650&height=0&rnd=132778299520000000");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#craft .grid-item2 {
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/40/82/68/sunflower-art-and-crafts.jpg?w=1200&h=-1&s=1");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#craft .grid-item3 {
+  background-image: url("https://explorelanka.com/wp-content/uploads/2015/03/art-craft-srilanka.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#craft .grid-item4 {
+  background-image: url("https://i.pinimg.com/originals/8d/20/2b/8d202b24857f3559366733ca9a17a8aa.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#craft .grid-item5 {
+  background-image: url("https://www.srilankadaytours.com/images/Pottery/011.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#craft .grid-item6 {
+  background-image: url("https://www.soulsrilanka.com/image/meta/sri-lanka-experiences-learn-about-batik.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#craft .grid-item7 {
+  background-image: url("https://www.reddottours.com/uploads/Activities/Activity-Category/Header-Images/Arts-&-Crafts-header.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#craft .grid-item8 {
+  background-image: url("https://exploresrilankadotblog.files.wordpress.com/2019/06/11084796895_7e9f1b3ddb_k.jpg?w=1200");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/******************  SRI LANKAN NEW YEAR AND TRADITIONS IN SRI LANKA IMAGES *******************/
+
+#newyear .grid-item1 {
+  background-image: url("https://i0.wp.com/magnificentsrilanka.com/wp-content/uploads/2021/04/avurudu-1.jpg?resize=1024%2C684&ssl=1");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#newyear .grid-item2 {
+  background-image: url("https://cdn.shopify.com/s/files/1/1762/3971/files/simha_662b3692-1ac1-4689-9341-0060fe57a7f0.jpg?v=1654598580&width=1500");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#newyear .grid-item3 {
+  background-image: url("http://blog.cinnamonhotels.com/wp-content/uploads/2022/04/D3R6469-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#newyear .grid-item4 {
+  background-image: url("https://d30od4ebpi69u8.cloudfront.net/sites/3/2019/04/6.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#newyear .grid-item5 {
+  background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/11/13742073863_ee2858186a_h.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#newyear .grid-item6 {
+  background-image: url("https://d1bvpoagx8hqbg.cloudfront.net/originals/sri-lankan-new-year-festival-b27905f748707980cb0ec0bde944d360.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#newyear .grid-item7 {
+  background-image: url("http://blog.cinnamonhotels.com/wp-content/uploads/2022/04/D3R6919-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#newyear .grid-item8 {
+  background-image: url("https://newwaytravel.com.vn/wp-content/uploads/2020/08/5a-2.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+/******************  RELIGIOUS HARMONY IN SRI LANKA IMAGES *******************/
+
+#religion .grid-item1 {
+  background-image: url("https://www.colombotimes.net/wp-content/uploads/2021/09/112.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#religion .grid-item2 {
+  background-image: url("https://c1.wallpaperflare.com/preview/795/484/2/meditation-bhikkhu-mahamevnawa-sri-lanka-buddhist-monk.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#religion .grid-item3 {
+  background-image: url("https://d1bv4heaa2n05k.cloudfront.net/posts%2FiHCXs8mjnuutk9BSL%2F1503303300714-shutterstock_591779303.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#religion .grid-item4 {
+  background-image: url("https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.dailymirror.lk/assets/uploads/image_e80671899b.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+#religion .grid-item5 {
+  background-image: url("https://img.atlasobscura.com/cQ-1Kp2v8XQNeUoiptmhPY9G0D8nftjohzuS7GUHxXw/rs:fill:580:580:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9iNTc3/NGY5YTAyODA1YTAz/MjZfc2l0dGluZyBi/dWRkaGEuanBn.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#religion .grid-item6 {
+  background-image: url("https://wpcdn.zenger.news/wp-content/uploads/2020/12/03020715/sri-lanka-edited-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#religion .grid-item7 {
+  background-image: url("http://nccsl.org/web/wp-content/uploads/2018/01/IMG_9185.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#religion .grid-item8 {
+  background-image: url("https://qph.cf2.quoracdn.net/main-qimg-b6c78357284d38771cdc435ca081156f-lq");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+/******************  TRADITIONAL ATTIRE IN SRI LANKA IMAGES *******************/
+
+#attire .grid-item1 {
+  background-image: url("https://assets.roar.media/Life/2017/09/low-country-noblemen.jpg?w=1200");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#attire .grid-item2 {
+  background-image: url("http://cdn.shopify.com/s/files/1/1034/8667/products/Lovi_Men_s_National_Silk_Kandian_Nilame_Srilankan_Embroidery_Wedding_HomeComing_Engagement_LongSleeves_Sarong.jpg?v=1603098575");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/5;
+}
+
+#attire .grid-item3 {
+  background-image: url("https://kiptra.com/wp-content/uploads/2022/12/ahikuntaka-community-upliftment-1.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/5;
+  grid-row: 5/5;
+}
+
+#attire .grid-item4 {
+  background-image: url("https://qph.cf2.quoracdn.net/main-qimg-43cdfce077cdec70e67fd1bee444189a.webp");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+
+#attire .grid-item5 {
+  background-image: url("https://media.istockphoto.com/id/1063375682/photo/sri-lankan-women-in-street-market-sri-lanka.jpg?s=170667a&w=0&k=20&c=EdxtstXYm4NL83ONh1yJyrDehGE1lPXneEWeuVVSJh0=");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+
+#attire .grid-item6 {
+  background-image: url("https://i0.wp.com/www.seema.com/wp-content/uploads/2022/09/Traditional-Clothing-of-Sri-Lanka1.jpg?resize=740%2C560&ssl=1");
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+#attire .grid-item7 {
+  background-image: url("https://i.pinimg.com/236x/07/2c/e5/072ce5c8b6d589374a95d2174572408b--ceylon-sri-lanka-black-asian.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#attire .grid-item8 {
+  background-image: url("https://i.pinimg.com/236x/7a/3c/cc/7a3ccc59f236979883dcf121f609fac3.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-column: 6/8;
+  grid-row: 1/6;
+}
+
+
+
+/****************** PAGE STYLES ************************/
 .page-number-block {
   text-align: center;
   padding: 3px;
