@@ -238,51 +238,20 @@ form.addEventListener('submit', (event) => {
       }
     }
 });
-    
+
 // Show error message when input is blurred
 //reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
-expyearInput.addEventListener('blur', () => {
-  const expyear = expyearInput.options[expyearInput.selectedIndex].value;
-  if (expyear == "") {
-    expyearInput.nextElementSibling.textContent = 'Select expiry year';
-  } else {
-    expyearInput.nextElementSibling.textContent = '';
-  }
-});
 
-expmonthInput.addEventListener('blur', () => {
-  const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
-  if (expmonth == "") {
-    expmonthInput.nextElementSibling.textContent = 'Select expiry month';
-  } else {
-    expmonthInput.nextElementSibling.textContent = '';
-  }
-});
-
-districtInput.addEventListener('blur', () => {
-  const district = districtInput.options[districtInput.selectedIndex].value;
-  if (district == "") {
-    districtInput.nextElementSibling.textContent = 'Select your district';
-  } else {
-    districtInput.nextElementSibling.textContent = '';
-  }
-});
-
-provinceInput.addEventListener('blur', () => {
-  const province = provinceInput.options[provinceInput.selectedIndex].value;
-  if (province == "") {
-    provinceInput.nextElementSibling.textContent = 'Select your province';
-  } else {
-    provinceInput.nextElementSibling.textContent = '';
-  }
-});
+const correctSpans = document.querySelectorAll(".correct");
 
 nameInput.addEventListener('blur', () => {
   const name = nameInput.value;
   if (!name || /^\d+$/.test(name)) {
     nameInput.nextElementSibling.textContent = 'Please enter your name';
+    correctSpans[0].innerHTML = "";
   } else {
     nameInput.nextElementSibling.textContent = '';
+    correctSpans[0].innerHTML = "&#10003;";
   }
 });
 
@@ -290,8 +259,10 @@ emailInput.addEventListener('blur', () => {
   const email = emailInput.value;
   if (!/\S+@\S+\.\S+/.test(email)) {
     emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
+    correctSpans[1].innerHTML = "";
   } else {
     emailInput.nextElementSibling.textContent = '';
+    correctSpans[1].innerHTML = "&#10003;";
   }
 });
 
@@ -299,8 +270,10 @@ contactInput.addEventListener('blur', () => {
   const contact = contactInput.value;
   if (contact.length !== 10) {
     contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
+    correctSpans[2].innerHTML = "";
   } else {
     contactInput.nextElementSibling.textContent = '';
+    correctSpans[2].innerHTML = "&#10003;";
   }
 });
 
@@ -308,8 +281,32 @@ addressInput.addEventListener('blur', () => {
   const address = addressInput.value;
   if (!address) {
     addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
+    correctSpans[3].innerHTML = "";
   } else {
     addressInput.nextElementSibling.textContent = '';
+    correctSpans[3].innerHTML = "&#10003;";
+  }
+});
+
+districtInput.addEventListener('blur', () => {
+  const district = districtInput.options[districtInput.selectedIndex].value;
+  if (district == "") {
+    districtInput.nextElementSibling.textContent = 'Select your district';
+    correctSpans[4].innerHTML = "";
+  } else {
+    districtInput.nextElementSibling.textContent = '';
+    correctSpans[4].innerHTML = "&#10003;";
+  }
+});
+
+provinceInput.addEventListener('blur', () => {
+  const province = provinceInput.options[provinceInput.selectedIndex].value;
+  if (province == "") {
+    provinceInput.nextElementSibling.textContent = 'Select your province';
+    correctSpans[5].innerHTML = "";
+  } else {
+    provinceInput.nextElementSibling.textContent = '';
+    correctSpans[5].innerHTML = "&#10003;";
   }
 });
 
@@ -317,35 +314,72 @@ postcodeInput.addEventListener('blur', () => {
   const postcode = postcodeInput.value;
   if (!postcode || !/^\d{5}$/.test(postcode)) {
     postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
+    correctSpans[6].innerHTML = "";
   } else {
     postcodeInput.nextElementSibling.textContent = '';
+    correctSpans[6].innerHTML = "&#10003;";
   }
 });
 
+//card details
+
+//card name
 cardNameInput.addEventListener('blur', () => {
   const cardName = cardNameInput.value;
   if (!cardName || /^\d+$/.test(cardName)) {
     cardNameInput.nextElementSibling.textContent = 'Please enter the cardholder\'s name';
+    correctSpans[7].innerHTML = "";
   } else {
     cardNameInput.nextElementSibling.textContent = '';
+    correctSpans[7].innerHTML = "&#10003;";
   }
 });
 
+//card number
 cardNumberInput.addEventListener('blur', () => {
   const cardNumber = cardNumberInput.value;
   if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
     cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
+    correctSpans[8].innerHTML = "";
   } else {
     cardNumberInput.nextElementSibling.textContent = '';
+    correctSpans[8].innerHTML = "&#10003;";
   }
 });
 
+//cvv input
 cvvInput.addEventListener('blur', () => {
   const cvv = cvvInput.value;
   if (!cvv || !/^\d{3}$/.test(cvv)) {
     cvvInput.nextElementSibling.textContent = 'Please enter a valid security number';
+    correctSpans[9].innerHTML = "";
   } else {
     cvvInput.nextElementSibling.textContent = '';
+    correctSpans[9].innerHTML = "&#10003;";
+  }
+});
+
+//exp month
+expmonthInput.addEventListener('blur', () => {
+  const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
+  if (expmonth == "") {
+    expmonthInput.nextElementSibling.textContent = 'Select expiry month';
+    correctSpans[10].innerHTML = "";
+  } else {
+    expmonthInput.nextElementSibling.textContent = '';
+    correctSpans[10].innerHTML = "&#10003;";
+  }
+});
+
+//exp year
+expyearInput.addEventListener('blur', () => {
+  const expyear = expyearInput.options[expyearInput.selectedIndex].value;
+  if (expyear == "") {
+    expyearInput.nextElementSibling.textContent = 'Select expiry year';
+    correctSpans[11].innerHTML = "";
+  } else {
+    expyearInput.nextElementSibling.textContent = '';
+    correctSpans[11].innerHTML = "&#10003;";
   }
 });
   

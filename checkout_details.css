@@ -108,8 +108,14 @@ span.error {
   margin-bottom: 10px;
 }
 
+span.correct {
+  color: #2eae2e;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 input {
-    width: 80%;
+    width: 90%;
     align-self: flex-start;
     font-size: 1rem;
     padding: .4rem 0;
@@ -205,26 +211,3 @@ label[for="district"] option[disabled] {
   opacity: 0.5;
 }
 
-/********************************FOOTER*******************************/
-.footer {
-  display: flex;
-  bottom:0; 
-  width:100%; 
-  height: 70px;
-  background-color: #144c7e;
-  font-weight: 300;
-  color: #fcfcfc;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.footer p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.footer a {
-    color: #ffffff;
-    font-style: italic;
-    font-weight: 500;
-}

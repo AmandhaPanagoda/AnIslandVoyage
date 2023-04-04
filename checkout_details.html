@@ -12,6 +12,9 @@
     <!--Navigation bar CSS-->
     <link rel="stylesheet" href="navigation.css">
 
+    <!--Footer CSS-->
+    <link rel="stylesheet" href="footer.css">
+
     <!--Font awesome kit + Pro CDN-->
     <script src="https://kit.fontawesome.com/5fe6ad5162.js" crossorigin="anonymous"></script>
     <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css">
@@ -68,19 +71,19 @@
       <div class="details-container">
         <div class="column">
           <h3>Billing Address</h3><br>
-              <label for="user-name"><i class="fa fa-user"></i> Full Name<span class="required">*</span></label>
+              <label for="user-name"><i class="fa fa-user"></i> Full Name<span class="required">*</span><span class="correct"></span></label>
               <input type="text" id="user-name" name="user-name" placeholder="John More Doe">
               <span class="error"></span>
               
-              <label for="email"><i class="fa fa-envelope"></i> Email<span class="required">*</span></label>
+              <label for="email"><i class="fa fa-envelope"></i> Email<span class="required">*</span><span class="correct"></span></label>
               <input type="email" id="email" name="email" placeholder="dummy@email.com">
               <span class="error"></span>
               
-              <label for="contact"><i class="fa fa-phone"></i> Contact Number<span class="required">*</span></label>
+              <label for="contact"><i class="fa fa-phone"></i> Contact Number<span class="required">*</span><span class="correct"></span></label>
               <input type="tel" id="contact" name="contact" placeholder="07XXXXXXXX">
               <span class="error"></span>
               
-              <label for="address"><i class="fa fa-home"></i> Address<span class="required">*</span></label>
+              <label for="address"><i class="fa fa-home"></i> Address<span class="required">*</span><span class="correct"></span></label>
               <input type="text" id="address" name="address" placeholder="12A Queens Road">
               <span class="error"></span>
 
@@ -89,7 +92,7 @@
               <span class="error"></span>
               <div class="dropdown-container">
                 <div class="dp-container2">
-                  <label for="district"><i class="fa fa-institution"></i> District<span class="required">*</span></label>
+                  <label for="district"><i class="fa fa-institution"></i> District<span class="required">*</span><span class="correct"></span></label>
                   <select name="district" id="district">
                     <option value="" label="select" disabled selected hidden></option>
                     <option value="Ampara">Ampara</option>
@@ -122,7 +125,7 @@
                 </div>
 
                 <div class="dp-container2">
-                  <label for="province"><i class="fa fa-map-signs"></i> Province<span class="required">*</span></label>
+                  <label for="province"><i class="fa fa-map-signs"></i> Province<span class="required">*</span><span class="correct"></span></label>
                   <select name="province" id="province">
                     <option value="" label="select" disabled selected hidden></option>
                     <option value="Central Province">Central Province</option>
@@ -139,7 +142,7 @@
                 </div>
               </div>
 
-              <label for="postcode"><i class="fa fa-map-pin"></i> Postcode<span class="required">*</span></label>
+              <label for="postcode"><i class="fa fa-map-pin"></i> Postcode<span class="required">*</span><span class="correct"></span></label>
               <input type="text" id="postcode" name="postcode" placeholder="10001">
               <span class="error"></span>
         </div>
@@ -151,21 +154,21 @@
             <i class="fa fa-cc-mastercard" style="color:red;"></i>
             <i class="fa fa-cc-discover" style="color:orange;"></i>
           </div>
-          <label for="cname">Card Holder's Name<span class="required">*</span></label>
+          <label for="cname">Card Holder's Name<span class="required">*</span><span class="correct"></span></label>
           <input type="text" id="cname" name="cardname" placeholder="John More Doe">
           <span class="error"></span>
           
-          <label for="ccnum">Card Number<span class="required">*</span></label>
+          <label for="ccnum">Card Number<span class="required">*</span><span class="correct"></span></label>
           <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX">
           <span class="error"></span>
 
-          <label for="cvv">Security Code<span class="required">*</span></label>
+          <label for="cvv">Security Code<span class="required">*</span><span class="correct"></span></label>
           <input type="text" id="cvv" name="cvv" placeholder="352">
           <span class="error"></span>
           
           <div class="dropdown-container">
             <div class="dp-container2">
-              <label for="expmonth">Exp Month<span class="required">*</span></label>
+              <label for="expmonth">Exp Month<span class="required">*</span><span class="correct"></span></label>
               <select name="expmonth" id="expmonth">
                 <option value="" label="select" disabled selected hidden></option>
                 <option value="January">January</option>
@@ -185,7 +188,7 @@
             </div>
             
             <div class="dp-container2">
-              <label for="expyear">Exp Year<span class="required">*</span></label>
+              <label for="expyear">Exp Year<span class="required">*</span><span class="correct"></span></label>
               <select name="expyear" id="expyear">
                 <option value="" label="select" disabled selected hidden></option>
                 <option value="2023">2023</option>
@@ -214,8 +217,33 @@
 
   <!--Footer-->
   <footer class="footer">
-    <p>© 2023 Island Voyage</p>
-    <p>Done By: <a href="amandha.html">Amandha Panagoda</a></p>
+
+    <div>
+        <img src="./logos/white-logo-transparent.png" alt="logo" class="logo">
+    </div>
+    <div class="row-2">
+        <ul class="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="buy_products.html" >Shop</a></li>
+            <li><a href="form.html">Comments</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="content-1.html">About Sri Lanka</a></li>
+            <li><a href="student-details.html">Student Details</a></li></li>
+        </ul>
+    </div>
+
+    <div class="row-3">
+        <ul class="socialMediaIcons">
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://web.facebook.com/"><i class="fa-brands fa-facebook"></i></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></i></a></li>
+        </ul>
+    </div>
+        
+        <div><p>© 2023 Island Voyage All Right Reserved</p></div>
+
+        <div><p>Done By: <b><a href="amandha.html">Amandha Panagoda</a></b></p></div>
   </footer>
 
   <script src="checkout_details.js"></script>

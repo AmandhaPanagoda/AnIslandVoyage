@@ -197,6 +197,18 @@ span.error {
 }
 
 /***********************Check out button*************************/
+.reset {
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: #0f4f87;
+  margin-bottom: 30px;
+}
+
+.reset:hover {
+  color: #398ad1;
+}
+/***********************Check out button*************************/
 
 .checkout {
   border-radius: 2rem;
@@ -306,27 +318,3 @@ span.error {
   opacity: 0.5;
 }
 
-/********************************FOOTER*******************************/
-.footer {
-  display: flex;
-  bottom:0; 
-  width:100%; 
-  height: 70px;
-  background-color: #144c7e;
-  font-weight: 300;
-  color: #fcfcfc;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.footer a {
-    color: #ffffff;
-    font-style: italic;
-    font-weight: 500;
-}
