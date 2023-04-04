@@ -11,7 +11,7 @@
   }
   
   body{
-    background: #2140D1;
+    background: #2141d14c;
   }
 
   .form {
@@ -21,13 +21,13 @@
   }
   
   .wrapper{
-    max-width: 800px;
-    width: 100%;
-    background: #fff;
+    max-width: 700px;
+    width: 80%;
+    background-color: #fff;
     padding: 80px;
     border-radius: 5px;
-    box-shadow: 4px 4px 2px #2140D1;
-    margin-bottom: 150px;
+    box-shadow: 2px 2px 2px #2141d14c;
+    margin-bottom: 100px;
     margin-top: 150px;
   }
   
@@ -46,7 +46,8 @@
   
   .wrapper .input_field input[type="text"],
   .wrapper textarea{
-    border: 1px solid #2140D1;
+    border: 1px solid #ebebeb;
+    background-color: #ebebeb;
     border-radius: 5px;
     width: 100%;
     padding: 10px;
@@ -68,7 +69,7 @@
     padding: 10px;
     text-align: center;
     width: 100%;
-    background: #2140D1;
+    background: #2141d1ab;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -78,10 +79,29 @@
     font-size: 20px;
   }
 
-  .drop_down{
-    margin-top: 10px;
-
+  .wrapper .btn button[type="submit"]:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
   }
+
+  .drop_down{
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  #source{
+    font-size:16px;
+    padding: 10px;
+    width:100%;
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+    margin-right: 20px;
+    color: #676767;
+  }
+
+
+  
   .star-widget {
     display: flex;
     justify-content: space-between;
@@ -93,6 +113,7 @@
     flex-direction: row;
     margin:10px;
     margin-bottom: 20px;
+    color: #67676760;
     
   }
   
@@ -129,19 +150,19 @@
   }
   
   .star-widget label input {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     opacity: 0;
   }
   
   .star-widget label .icon {
-    float: left;
-    color: transparent;
+    /*float: left;*/
+    color: #67676760;
   }
   
   .star-widget label:last-child .icon {
-    color: #000;
+    color: #67676760;
   }
   
   .star-widget:not(:hover) label input:checked ~ .icon,
@@ -150,7 +171,7 @@
   }
   
   .star-widget  label input:focus:not(:checked) ~ .icon:last-child {
-    color:#444;
+    color:#67676760;
     text-shadow: 0 0 5px rgb(255, 204, 0);
   }
 
@@ -200,34 +221,38 @@
   
   #error_message{
     margin-bottom: 20px;
-    background: #fe8b8e;
+    color: #fe8b8e;
     padding: 0px;
     text-align: center;
     font-size: 14px;
     transition: all 0.5s ease;
   }
 
-.footer {
+  .footer {
     display: flex;
-    bottom:0%; 
+    bottom:0; 
     width:100%; 
     height: 70px;
-    background-color: #e8dbdbb4;
-    font-weight: 300;
-    position: fixed;
-    color: #000000;
+    background-color: #0e0707c8;
+    font-weight: 500;
+    color: #fff;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     }
+
+.footer a:hover{
+    color: #e8dbdb56;
+}
     
 .footer p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
 .footer a {
-        color: #000000;
-        font-style: italic;
-        font-weight: 500;
-      }
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;}
+    
