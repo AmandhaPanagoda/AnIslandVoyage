@@ -18,18 +18,26 @@ body {
 
 .main-intro {
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left:100px;
+    margin-right:100px;
     padding-top: 100px;
 }
 
-h1 {
+.main-intro h1{
+    font-size:60px ;
     margin-bottom: 80px;
 }
 
+.Intro{
+    font-size:20px ;
+}
+
+
 .slogan {
+    margin-top: 100px;
+    margin-bottom: 150px;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .bg-opacity {
@@ -41,9 +49,21 @@ h1 {
     justify-content: space-between;
     flex-direction: row;
     font-size: 22px;
-    margin: 50px;
+    margin: 60px;
     margin-bottom: 0;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+.content-pages a{
+    text-decoration: none;
+}
+
+.content-pages h4{
+    color: #000000;   
+}
+
+.content-pages h4:hover{
+    color: #444444db;
 }
 
 .content-pages img{
@@ -55,9 +75,16 @@ h1 {
 .attractions, .adventure, .life{
     background-color: #ffffff;
     width: 400px;
-    height:550px;
+    height:500px;
     border-radius: 25px;
     text-align: center;
+}
+
+.attractions:hover, .adventure:hover, .life:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+
 }
 
 .footer {
@@ -65,14 +92,17 @@ h1 {
     bottom:0; 
     width:100%; 
     height: 70px;
-    background-color: #f9f9f9fa;
-    font-weight: 300;
-   
-    color: #000000;
+    background-color: #0e0707c8;
+    font-weight: 500;
+    color: #fff;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     }
+
+.footer a:hover{
+    color: #e8dbdb56;
+}
     
 .footer p {
 margin-top: 0px;
@@ -80,8 +110,9 @@ margin-bottom: 0px;
 }
 
 .footer a {
-    color: #000000;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
 }
     
