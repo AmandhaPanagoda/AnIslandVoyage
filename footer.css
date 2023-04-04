@@ -1,5 +1,4 @@
 .footer {
-    padding: 20px 50px;
     position:relative;
     display: flex;
     bottom:0; 
@@ -14,8 +13,9 @@
     }
 
 footer .logo{
-    width:200px;
+    height: 200px;
     height:200px;
+    overflow: hidden;
     position: relative;
     margin: 0;
     flex-wrap: wrap;
