@@ -190,6 +190,12 @@ label[for="district"] option[disabled] {
   color: white;
 }
 
+#placeorderbutton.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
 /***********************BACK TO TOP BUTTON********************/
 
 #back-to-top {

@@ -96,6 +96,14 @@ function setInputValueById(id, value) {
 }
 
 const form = document.getElementById('billing-info-form');
+const submitButton = document.getElementById('placeorderbutton');
+const resetButton = document.getElementById('resetbutton');
+
+//submit button disabled when loaded
+submitButton.classList.add("disabled");
+submitButton.disabled = true;
+
+//fetching input fields
 const nameInput = document.getElementById('user-name');
 const emailInput = document.getElementById('email');
 const contactInput = document.getElementById('contact');
@@ -108,143 +116,60 @@ const expyearInput = document.getElementById('expyear');
 const expmonthInput = document.getElementById('expmonth');
 const districtInput = document.getElementById('district');
 const provinceInput = document.getElementById('province');
-  
-form.addEventListener('submit', (event) => {
-    let isValid = true;
-    const name = nameInput.value;
-    const email = emailInput.value;
-    const contact = contactInput.value;
-    const address = addressInput.value;
-    const postcode = postcodeInput.value;
-    const cardName = cardNameInput.value;
-    const cardNumber = cardNumberInput.value;
-    const cvv = cvvInput.value;
-    const expyear = expyearInput.options[expyearInput.selectedIndex].value;
-    const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
-    const district = districtInput.options[districtInput.selectedIndex].value;
-    const province = provinceInput.options[provinceInput.selectedIndex].value;
 
+const correctSpans = document.querySelectorAll(".correct");
+  
+function checkAnswers() {
+  //entered values
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const contact = contactInput.value;
+  const address = addressInput.value;
+  const postcode = postcodeInput.value;
+  const cardName = cardNameInput.value;
+  const cardNumber = cardNumberInput.value;
+  const cvv = cvvInput.value;
+  const expyear = expyearInput.options[expyearInput.selectedIndex].value;
+  const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
+  const district = districtInput.options[districtInput.selectedIndex].value;
+  const province = provinceInput.options[provinceInput.selectedIndex].value;
+
+  if ( !name || /^\d+$/.test(name) || !/\S+@\S+\.\S+/.test(email) || district == "" || province == "" || contact.length !== 10 || !address || !postcode || !/^\d{5}$/.test(postcode) || !cardName || /^\d+$/.test(cardName) || !cardNumber || !/^\d{16}$/.test(cardNumber) || !cvv || !/^\d{3}$/.test(cvv) || expyear == "" || expmonth == "" ) {
+    submitButton.disabled = true;
+    submitButton.classList.add("disabled");
+  } else {
+    submitButton.disabled = false;
+    submitButton.classList.remove("disabled");
+    console.log("valid inputs");
+  }
+};
+
+submitButton.addEventListener("click", (event) => {
     event.preventDefault();
+    alert("Your order is submitted successfully!\nAwait your delivery!");
+    const confirmed = confirm('Do you want to proceed to products catalogue?');
 
-    // Validate expyear
-    if (expyear == "") {
-      expyearInput.nextElementSibling.textContent = 'Select expiry year';
-      isValid = false;
+    if (confirmed) {
+      window.location.href = 'buy_products.html';
     } else {
-      expyearInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate expmonth
-    if (expmonth == "") {
-      expmonthInput.nextElementSibling.textContent = 'Select expiry month';
-      isValid = false;
-    } else {
-      expmonthInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate district
-    if (district == "") {
-      districtInput.nextElementSibling.textContent = 'Select your district';
-      isValid = false;
-    } else {
-      districtInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate province
-    if (province == "") {
-      provinceInput.nextElementSibling.textContent = 'Select your province';
-      isValid = false;
-    } else {
-      provinceInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate name
-    if (!name || /^\d+$/.test(name)) {
-      nameInput.nextElementSibling.textContent = 'Please enter your name';
-      isValid = false;
-    } else {
-      nameInput.nextElementSibling.textContent = '';
-    }
-  
-    // Validate email
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
-      isValid = false;
-    } else {
-      emailInput.nextElementSibling.textContent = '';
-    }
-  
-    // Validate contact
-    if (contact.length !== 10) {
-      contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
-      isValid = false;
-      console.log("invalid contact");
-    } else {
-      contactInput.nextElementSibling.textContent = '';
-    }
-  
-    // Validate address
-    if (!address) {
-      addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
-      isValid = false;
-    } else {
-      addressInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate Postcode
-    if (!postcode || !/^\d{5}$/.test(postcode)) {
-      postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
-      isValid = false;
-    } else {
-      postcodeInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate card name
-    if (!cardName || /^\d+$/.test(cardName)) {
-      cardNameInput.nextElementSibling.textContent = 'Please enter the card holder name';
-      isValid = false;
-    } else {
-      cardNameInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate card number
-    if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
-      cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
-      isValid = false;
-    } else {
-      cardNumberInput.nextElementSibling.textContent = '';
-    }
-
-    // Validate CVV
-    if (!cvv || !/^\d{3}$/.test(cvv)) {
-      cvvInput.nextElementSibling.textContent = 'Please enter the 3 digit security number';
-      isValid = false;
-    } else {
-      cvvInput.nextElementSibling.textContent = '';
-    }
-
-    if (!isValid) {
-      console.log("not valid");
-      event.preventDefault();
-    } else {
-      console.log("valid inputs");
-      alert("Your order is submitted successfully! Await your delivery!");
-      const confirmed = confirm('Do you want to proceed to products catalogue?');
-
-      if (confirmed) {
-        window.location.href = 'buy_products.html';
-      } else {
-        window.location.href = 'home.html';
-      }
+      window.location.href = 'home.html';
+      localStorage.clear(); //clear the local storage
     }
 });
 
-// Show error message when input is blurred
-//reference -> https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+resetButton.addEventListener("click", function() {
+  for (let i = 0; i < correctSpans.length; i++) {
+    correctSpans[i].innerHTML = ""; //remove the tick buttons
+  }
+  submitButton.disabled = true;
+  submitButton.classList.add("disabled"); // disable the submit button
+});
 
-const correctSpans = document.querySelectorAll(".correct");
+// Show error message when input is entered
+//reference -> https://www.webmound.com/input-vs-change-vs-blur-vs-focus-javascript-events/#:~:text=In%20JavaScript%2C%20the%20focus%20and,and%20the%20field%20loses%20focus.
 
-nameInput.addEventListener('blur', () => {
+//name validation
+nameInput.addEventListener('input', () => {
   const name = nameInput.value;
   if (!name || /^\d+$/.test(name)) {
     nameInput.nextElementSibling.textContent = 'Please enter your name';
@@ -253,9 +178,11 @@ nameInput.addEventListener('blur', () => {
     nameInput.nextElementSibling.textContent = '';
     correctSpans[0].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-emailInput.addEventListener('blur', () => {
+//email validation
+emailInput.addEventListener('input', () => {
   const email = emailInput.value;
   if (!/\S+@\S+\.\S+/.test(email)) {
     emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
@@ -264,9 +191,11 @@ emailInput.addEventListener('blur', () => {
     emailInput.nextElementSibling.textContent = '';
     correctSpans[1].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-contactInput.addEventListener('blur', () => {
+//contact validation
+contactInput.addEventListener('input', () => {
   const contact = contactInput.value;
   if (contact.length !== 10) {
     contactInput.nextElementSibling.textContent = 'Please enter a valid phone number';
@@ -275,9 +204,11 @@ contactInput.addEventListener('blur', () => {
     contactInput.nextElementSibling.textContent = '';
     correctSpans[2].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-addressInput.addEventListener('blur', () => {
+//address  validation
+addressInput.addEventListener('input', () => {
   const address = addressInput.value;
   if (!address) {
     addressInput.nextElementSibling.textContent = 'Please enter the delivery address';
@@ -286,8 +217,36 @@ addressInput.addEventListener('blur', () => {
     addressInput.nextElementSibling.textContent = '';
     correctSpans[3].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
+//district validation
+districtInput.addEventListener('input', () => {
+  const district = districtInput.options[districtInput.selectedIndex].value;
+  if (district == "") {
+    districtInput.nextElementSibling.textContent = 'Select your district';
+    correctSpans[4].innerHTML = "";
+  } else {
+    districtInput.nextElementSibling.textContent = '';
+    correctSpans[4].innerHTML = "&#10003;";
+  }
+  checkAnswers();
+});
+
+//province validation
+provinceInput.addEventListener('input', () => {
+  const province = provinceInput.options[provinceInput.selectedIndex].value;
+  if (province == "") {
+    provinceInput.nextElementSibling.textContent = 'Select your province';
+    correctSpans[5].innerHTML = "";
+  } else {
+    provinceInput.nextElementSibling.textContent = '';
+    correctSpans[5].innerHTML = "&#10003;";
+  }
+  checkAnswers();
+});
+
+//district validation  blur
 districtInput.addEventListener('blur', () => {
   const district = districtInput.options[districtInput.selectedIndex].value;
   if (district == "") {
@@ -297,8 +256,10 @@ districtInput.addEventListener('blur', () => {
     districtInput.nextElementSibling.textContent = '';
     correctSpans[4].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
+//province validation blur
 provinceInput.addEventListener('blur', () => {
   const province = provinceInput.options[provinceInput.selectedIndex].value;
   if (province == "") {
@@ -308,9 +269,11 @@ provinceInput.addEventListener('blur', () => {
     provinceInput.nextElementSibling.textContent = '';
     correctSpans[5].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-postcodeInput.addEventListener('blur', () => {
+//postcode validation
+postcodeInput.addEventListener('input', () => {
   const postcode = postcodeInput.value;
   if (!postcode || !/^\d{5}$/.test(postcode)) {
     postcodeInput.nextElementSibling.textContent = 'Please enter a valid postcode';
@@ -319,12 +282,11 @@ postcodeInput.addEventListener('blur', () => {
     postcodeInput.nextElementSibling.textContent = '';
     correctSpans[6].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-//card details
-
 //card name
-cardNameInput.addEventListener('blur', () => {
+cardNameInput.addEventListener('input', () => {
   const cardName = cardNameInput.value;
   if (!cardName || /^\d+$/.test(cardName)) {
     cardNameInput.nextElementSibling.textContent = 'Please enter the cardholder\'s name';
@@ -333,10 +295,11 @@ cardNameInput.addEventListener('blur', () => {
     cardNameInput.nextElementSibling.textContent = '';
     correctSpans[7].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
 //card number
-cardNumberInput.addEventListener('blur', () => {
+cardNumberInput.addEventListener('input', () => {
   const cardNumber = cardNumberInput.value;
   if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
     cardNumberInput.nextElementSibling.textContent = 'Please enter a valid card number';
@@ -345,10 +308,11 @@ cardNumberInput.addEventListener('blur', () => {
     cardNumberInput.nextElementSibling.textContent = '';
     correctSpans[8].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
 //cvv input
-cvvInput.addEventListener('blur', () => {
+cvvInput.addEventListener('input', () => {
   const cvv = cvvInput.value;
   if (!cvv || !/^\d{3}$/.test(cvv)) {
     cvvInput.nextElementSibling.textContent = 'Please enter a valid security number';
@@ -357,9 +321,36 @@ cvvInput.addEventListener('blur', () => {
     cvvInput.nextElementSibling.textContent = '';
     correctSpans[9].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
 //exp month
+expmonthInput.addEventListener('input', () => {
+  const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
+  if (expmonth == "") {
+    expmonthInput.nextElementSibling.textContent = 'Select expiry month';
+    correctSpans[10].innerHTML = "";
+  } else {
+    expmonthInput.nextElementSibling.textContent = '';
+    correctSpans[10].innerHTML = "&#10003;";
+  }
+  checkAnswers();
+});
+
+//exp year
+expyearInput.addEventListener('input', () => {
+  const expyear = expyearInput.options[expyearInput.selectedIndex].value;
+  if (expyear == "") {
+    expyearInput.nextElementSibling.textContent = 'Select expiry year';
+    correctSpans[11].innerHTML = "";
+  } else {
+    expyearInput.nextElementSibling.textContent = '';
+    correctSpans[11].innerHTML = "&#10003;";
+  }
+  checkAnswers();
+});
+
+//exp month blur event
 expmonthInput.addEventListener('blur', () => {
   const expmonth = expmonthInput.options[expmonthInput.selectedIndex].value;
   if (expmonth == "") {
@@ -369,9 +360,10 @@ expmonthInput.addEventListener('blur', () => {
     expmonthInput.nextElementSibling.textContent = '';
     correctSpans[10].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
 
-//exp year
+//exp year blur event
 expyearInput.addEventListener('blur', () => {
   const expyear = expyearInput.options[expyearInput.selectedIndex].value;
   if (expyear == "") {
@@ -381,6 +373,7 @@ expyearInput.addEventListener('blur', () => {
     expyearInput.nextElementSibling.textContent = '';
     correctSpans[11].innerHTML = "&#10003;";
   }
+  checkAnswers();
 });
   
 //back to top button functionality
