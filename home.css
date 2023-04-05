@@ -9,7 +9,7 @@
 body {
     background-image: url("./images_home/main\ page\ image.jpg");
     background-repeat: no-repeat;
-    background-position: right-top;
+    background-position: right top;
     background-attachment: fixed;
     background-size: cover;
     color: #000000;

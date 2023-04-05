@@ -11,7 +11,7 @@ body {
 
 
 h1 {
-    background-image: url(https://thumbs.gfycat.com/AthleticEvenGypsymoth-size_restricted.gif);
+    background-image: url(https://media.tenor.com/TwDRx6gwXMEAAAAd/waterfall-nature.gif);
     background-size: cover;
     color: transparent;
     -moz-background-clip: text;
@@ -72,15 +72,15 @@ h1 {
     padding: 6px;
     text-transform: lowercase;
     border: none;
-    background-color: #0765c3;
+    background-color: #058322;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
 }
 
 .anchors a:hover {
-    border: 0.5px solid #054b90;
-    background-color: #054b90;
+    border: 0.5px solid #09d238;
+    background-color: #09d238;
 }
 
 
@@ -90,7 +90,7 @@ section {
 
 section h2 {
     font-size: 60px;
-    color: #195284;
+    color: #0c6220;
 }
 
 .grid {
